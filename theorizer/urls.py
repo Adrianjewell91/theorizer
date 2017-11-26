@@ -16,6 +16,28 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from django.views.generic import View
+from django.http import HttpResponse
+
+import os
+
+class ReactAppView(View):
+    def get(self, request):
+        try:
+
+            with open(os.path.join('frontend', 'index.html')) as file:
+                return HttpResponse(file.read())
+
+        except :
+            return HttpResponse(
+                """
+                index.html not found ! build your React app !!
+                """,
+                status=501,
+            )
+
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^',ReactAppView.as_view())
 ]
