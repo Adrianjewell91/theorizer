@@ -4,18 +4,24 @@ from django.shortcuts import render
 
 #the view here probably needs to load the model, load the weights,
 #and then make a prediction and send back the data.
-from rest_framework import viewsets
-from rest_framework.response import Response
+from django.http import HttpResponse, JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 
-class NeuralNetworkViewSet(viewsets.ViewSet):
-    def list(self, request,):
-        return Response({reponse: "list"})
+@csrf_exempt
+def neural_network_list(request):
+    if request.method == 'GET':
+        return JsonResponse('{retort: "get"}', safe=False)
 
-    def create(self, request,):
-        return Response({reponse: "create"})
+    elif request.method == 'POST':
+        return JsonResponse('{response: "ERROR"}', safe=False,status=400)
 
-    def retrieve(self, request, pk=None):
-        return Response({reponse: "retrieve"})
+@csrf_exempt
+def neural_network_detail(request, pk):
+    if request.method == 'GET':
+        return JsonResponse('{response: "get"}', safe=False)
 
-    def destroy(self, request, pk=None):
-        return Response({reponse: "destroy"})
+    elif request.method == 'PUT':
+        return JsonResponse('{response: "ERROR"}', safe=False, status=400)
+
+    elif request.method == 'DELETE':
+        return JsonResponse('{response: "DELETE"}', safe=False, status=204)
