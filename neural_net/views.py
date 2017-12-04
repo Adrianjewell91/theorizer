@@ -18,7 +18,7 @@ def neural_network_list(request):
 @csrf_exempt
 def neural_network_detail(request, pk):
     if request.method == 'GET':
-        return JsonResponse('{response: "get"}', safe=False)
+        return JsonResponse('{response: "get someting specific"}', safe=False)
 
     elif request.method == 'PUT':
         return JsonResponse('{response: "ERROR"}', safe=False, status=400)
