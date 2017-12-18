@@ -31,20 +31,18 @@ body {
   height: 150px;
 }
 
-.white-key {
+.white {
   width: 50px;
   background: white;
   border-left: 1px solid black;
 }
 
-.black-key {
-
-  position: relative;
+.black {
+    position: relative;
     right: .75%;
-  /* background-color: ?green; */
 }
 
-.black-key::after {
+.black::after {
   content: "";
   position: absolute;
   background: black;
@@ -54,5 +52,15 @@ body {
 }
 
 .selected {
+  position: relative;
+  right: .75%;
+}
+
+.selected::after {
+  content: "";
+  position: absolute;
   background: purple;
+  width: 40px;
+  height: 140px;
+  bottom: 30%;
 }

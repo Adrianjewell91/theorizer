@@ -22,15 +22,23 @@ class Keyboard extends React.Component {
   //could potentially send a request every time key is pressed.
 
   handleKeyToggle() {
-    //I'm leaving the id in there, may need in
     return (e) => {
       // debugger
       const newData = this.state.data;
       newData[parseInt(e.target.id)] = newData[parseInt(e.target.id)] === 0 ? 1 : 0;
 
-      e.target.style.background = newData[parseInt(e.target.id)] === 0 ? '' : 'purple';
-
-      // console.log(newData);
+      if (e.target.classList.value === "white") {
+        e.target.style.background = newData[parseInt(e.target.id)] === 0 ? '' : 'purple';
+      } else {
+        if (newData[parseInt(e.target.id)] === 0) {
+          e.target.classList.add("black")
+          e.target.classList.remove("selected")
+        } else  {
+          e.target.classList.add("selected")
+          e.target.classList.remove("black")
+        }
+      }
+      console.log(newData);
       this.setState({data: newData});
     }
   }
@@ -41,94 +49,94 @@ class Keyboard extends React.Component {
         <button type="button" onClick={this.handleSubmit}>Submit a query to neural network</button>
 
         <div className="keyboard-register">
-          <button onClick={this.handleKeyToggle()} className="white-key" id='0'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='1'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='2'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='3'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='4'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='5'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='6'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='7'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='8'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='9'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='10'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='11'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='12'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='13'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='14'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='15'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='16'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='17'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='18'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='19'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='20'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='21'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='22'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='23'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='24'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='25'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='26'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='27'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='28'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='29'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='30'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='31'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='32'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='33'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='34'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='35'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='36'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='37'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='38'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='39'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='40'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='41'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='42'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='43'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='44'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='45'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='46'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='47'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='48'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='49'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='50'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='51'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='52'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='53'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='54'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='55'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='56'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='57'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='58'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='59'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='60'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='61'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='62'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='63'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='64'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='65'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='66'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='67'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='68'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='69'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='70'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='71'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='72'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='73'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='74'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='75'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='76'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='77'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='78'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='79'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='80'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='81'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='82'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='83'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='84'></button>
-          <button onClick={this.handleKeyToggle()} className="black-key" id='85'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='86'></button>
-          <button onClick={this.handleKeyToggle()} className="white-key" id='87'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='0'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='1'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='2'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='3'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='4'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='5'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='6'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='7'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='8'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='9'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='10'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='11'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='12'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='13'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='14'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='15'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='16'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='17'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='18'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='19'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='20'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='21'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='22'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='23'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='24'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='25'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='26'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='27'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='28'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='29'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='30'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='31'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='32'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='33'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='34'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='35'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='36'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='37'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='38'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='39'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='40'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='41'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='42'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='43'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='44'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='45'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='46'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='47'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='48'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='49'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='50'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='51'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='52'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='53'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='54'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='55'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='56'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='57'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='58'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='59'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='60'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='61'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='62'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='63'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='64'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='65'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='66'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='67'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='68'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='69'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='70'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='71'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='72'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='73'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='74'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='75'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='76'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='77'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='78'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='79'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='80'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='81'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='82'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='83'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='84'></button>
+          <button onClick={this.handleKeyToggle()} className="black" id='85'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='86'></button>
+          <button onClick={this.handleKeyToggle()} className="white" id='87'></button>
         </div>
 
       </div>
