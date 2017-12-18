@@ -1,0 +1,41 @@
+.keyboard-register {
+  overflow-x: auto;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  height: 150px;
+}
+
+.white {
+  width: 50px;
+  background: white;
+  border-left: 1px solid black;
+}
+
+.black {
+    position: relative;
+    right: .75%;
+}
+
+.black::after {
+  content: "";
+  position: absolute;
+  background: black;
+  width: 40px;
+  height: 140px;
+  bottom: 30%;
+}
+
+.selected {
+  position: relative;
+  right: .75%;
+}
+
+.selected::after {
+  content: "";
+  position: absolute;
+  background: blue;
+  width: 40px;
+  height: 140px;
+  bottom: 30%;
+}

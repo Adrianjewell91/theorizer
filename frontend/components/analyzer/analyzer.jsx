@@ -6,8 +6,7 @@ class Analyzer extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  //whenever the userInputData changes, I want to make a new request.
-  //
+  //whenever the userInputData changes, I want to make a new request. Implement later.
 
   handleSubmit() {
     console.log('analzer button - should work soon.');
@@ -18,9 +17,13 @@ class Analyzer extends React.Component {
     const prediction = this.props.prediction.response
     return (
       <div className="analyzer-div">
-        <button type="button" onClick={this.handleSubmit}>Submit a query to neural network</button>
         <div>
-          Current Analysis: {prediction}
+          <button className="analyze-button" type="button" onClick={this.handleSubmit}>Submit a query to neural network</button>
+          <br/>
+          <br/>
+          <br/>
+          <span>Analysis</span> <br/>
+          {prediction}.
         </div>
       </div>
     )

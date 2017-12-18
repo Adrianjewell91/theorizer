@@ -1,8 +1,8 @@
 .nav-header-div {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;s
 }
 
 .nav-header {
-
+  font-size: 200%;
 }

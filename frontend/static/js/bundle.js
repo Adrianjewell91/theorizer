@@ -25563,6 +25563,10 @@ var _analyzerContainer = __webpack_require__(127);
 
 var _analyzerContainer2 = _interopRequireDefault(_analyzerContainer);
 
+var _scoreRendererContainer = __webpack_require__(129);
+
+var _scoreRendererContainer2 = _interopRequireDefault(_scoreRendererContainer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var App = function App() {
@@ -25570,7 +25574,12 @@ var App = function App() {
         'div',
         null,
         _react2.default.createElement(_navBarContainer2.default, null),
-        _react2.default.createElement(_analyzerContainer2.default, null),
+        _react2.default.createElement(
+            'div',
+            { className: 'main-page' },
+            _react2.default.createElement(_scoreRendererContainer2.default, null),
+            _react2.default.createElement(_analyzerContainer2.default, null)
+        ),
         _react2.default.createElement(_keyboardContainer2.default, null)
     );
 };
@@ -36406,8 +36415,7 @@ var Analyzer = function (_React$Component) {
     return _this;
   }
 
-  //whenever the userInputData changes, I want to make a new request.
-  //
+  //whenever the userInputData changes, I want to make a new request. Implement later.
 
   _createClass(Analyzer, [{
     key: 'handleSubmit',
@@ -36423,15 +36431,140 @@ var Analyzer = function (_React$Component) {
         'div',
         { className: 'analyzer-div' },
         _react2.default.createElement(
-          'button',
-          { type: 'button', onClick: this.handleSubmit },
-          'Submit a query to neural network'
-        ),
-        _react2.default.createElement(
           'div',
           null,
-          'Current Analysis: ',
-          prediction
+          _react2.default.createElement(
+            'button',
+            { className: 'analyze-button', type: 'button', onClick: this.handleSubmit },
+            'Submit a query to neural network'
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'span',
+            null,
+            'Analysis'
+          ),
+          ' ',
+          _react2.default.createElement('br', null),
+          prediction,
+          '.'
+        )
+      );
+    }
+  }]);
+
+  return Analyzer;
+}(_react2.default.Component);
+
+exports.default = Analyzer;
+
+/***/ }),
+/* 129 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _reactRedux = __webpack_require__(31);
+
+var _scoreRenderer = __webpack_require__(130);
+
+var _scoreRenderer2 = _interopRequireDefault(_scoreRenderer);
+
+var _prediction_actions = __webpack_require__(49);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var mapStateToProps = function mapStateToProps(state) {
+    return {
+        prediction: state.entities.prediction,
+        userInputData: state.entities.userInputData
+    };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+    return {
+        requestMajorChordName: function requestMajorChordName(prediction) {
+            return dispatch((0, _prediction_actions.requestMajorChordName)(prediction));
+        }
+    };
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_scoreRenderer2.default);
+
+/***/ }),
+/* 130 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Analyzer = function (_React$Component) {
+  _inherits(Analyzer, _React$Component);
+
+  function Analyzer(props) {
+    _classCallCheck(this, Analyzer);
+
+    return _possibleConstructorReturn(this, (Analyzer.__proto__ || Object.getPrototypeOf(Analyzer)).call(this, props));
+  }
+
+  _createClass(Analyzer, [{
+    key: "handleSubmit",
+    value: function handleSubmit() {}
+  }, {
+    key: "render",
+    value: function render() {
+      var prediction = this.props.prediction.response;
+      return _react2.default.createElement(
+        "div",
+        { className: "score-render-div" },
+        _react2.default.createElement(
+          "div",
+          null,
+          _react2.default.createElement(
+            "h3",
+            null,
+            "Instructions:"
+          ),
+          _react2.default.createElement(
+            "p",
+            null,
+            "Click the piano keys, and then press submit. ",
+            _react2.default.createElement("br", null),
+            "A neural network, will tell you what chord is being played. ",
+            _react2.default.createElement("br", null),
+            "Right now, it only know majors chords. ",
+            _react2.default.createElement("br", null),
+            "It can handle a few novel variations (open positions, and a few extensions). ",
+            _react2.default.createElement("br", null),
+            "In the future, a score would go here. ",
+            _react2.default.createElement("br", null),
+            "Future plans include a score render, and a method to train the network from the browser."
+          )
         )
       );
     }

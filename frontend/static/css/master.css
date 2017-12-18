@@ -17,50 +17,28 @@ time, mark, audio, video, button {
     font-size:100%;
     vertical-align:baseline;
     background:transparent;
+    font-family: sans-serif;
 }
 
 body {
   background-color: gray;
 }
 
-.keyboard-register {
-  overflow-x: scroll;
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  height: 150px;
+.main-page {
+  display: grid;
+  grid-template-columns: 3;
 }
 
-.white {
-  width: 50px;
-  background: white;
-  border-left: 1px solid black;
+.main-page * {
+  margin: 1%;
 }
 
-.black {
-    position: relative;
-    right: .75%;
+.analyzer-div {
+  grid-row: 1;
+  grid-column: 3/3;
 }
 
-.black::after {
-  content: "";
-  position: absolute;
-  background: black;
-  width: 40px;
-  height: 140px;
-  bottom: 30%;
-}
-
-.selected {
-  position: relative;
-  right: .75%;
-}
-
-.selected::after {
-  content: "";
-  position: absolute;
-  background: blue;
-  width: 40px;
-  height: 140px;
-  bottom: 30%;
+.score-render-div {
+  grid-row: 1;
+  grid-column: 1/3;
 }

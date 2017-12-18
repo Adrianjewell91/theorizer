@@ -10,11 +10,15 @@ import {
 import KeyboardContainer from "./keyboard/keyboardContainer";
 import NavBarContainer from './navBar/navBarContainer';
 import AnalyzerContainer from './analyzer/analyzerContainer';
+import ScoreRendererContainer from './scoreRenderer/scoreRendererContainer';
 
 const App = () => (
     <div>
       <NavBarContainer/>
-      <AnalyzerContainer/>
+      <div className="main-page">
+        <ScoreRendererContainer/>
+        <AnalyzerContainer/>
+      </div>
       <KeyboardContainer/>
     </div>
 );
