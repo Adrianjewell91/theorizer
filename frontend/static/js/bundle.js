@@ -36418,38 +36418,50 @@ var Analyzer = function (_React$Component) {
   //whenever the userInputData changes, I want to make a new request. Implement later.
 
   _createClass(Analyzer, [{
-    key: 'handleSubmit',
+    key: "componentWillReceiveProps",
+    value: function componentWillReceiveProps(newProps) {
+      if (this.props.userInputData !== newProps.userInputData) {
+        this.props.requestMajorChordName([newProps.userInputData]);
+      }
+    }
+  }, {
+    key: "handleSubmit",
     value: function handleSubmit() {
-      console.log('analzer button - should work soon.');
       this.props.requestMajorChordName([this.props.userInputData]);
     }
   }, {
-    key: 'render',
+    key: "render",
     value: function render() {
       var prediction = this.props.prediction.response;
       return _react2.default.createElement(
-        'div',
-        { className: 'analyzer-div' },
+        "div",
+        { className: "analyzer-div" },
         _react2.default.createElement(
-          'div',
+          "div",
           null,
           _react2.default.createElement(
-            'button',
-            { className: 'analyze-button', type: 'button', onClick: this.handleSubmit },
-            'Submit a query to neural network'
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'span',
+            "h3",
             null,
-            'Analysis'
+            _react2.default.createElement(
+              "button",
+              { className: "analyze-button", type: "button", onClick: this.handleSubmit },
+              "Submit"
+            )
           ),
-          ' ',
-          _react2.default.createElement('br', null),
-          prediction,
-          '.'
+          _react2.default.createElement("br", null),
+          _react2.default.createElement("br", null),
+          _react2.default.createElement("br", null),
+          _react2.default.createElement(
+            "span",
+            null,
+            "Analysis"
+          ),
+          _react2.default.createElement("br", null),
+          _react2.default.createElement(
+            "span",
+            { className: "analysis-result" },
+            prediction
+          )
         )
       );
     }
@@ -36533,9 +36545,6 @@ var Analyzer = function (_React$Component) {
   }
 
   _createClass(Analyzer, [{
-    key: "handleSubmit",
-    value: function handleSubmit() {}
-  }, {
     key: "render",
     value: function render() {
       var prediction = this.props.prediction.response;
@@ -36543,28 +36552,26 @@ var Analyzer = function (_React$Component) {
         "div",
         { className: "score-render-div" },
         _react2.default.createElement(
-          "div",
+          "p",
           null,
-          _react2.default.createElement(
-            "h3",
-            null,
-            "Instructions:"
-          ),
-          _react2.default.createElement(
-            "p",
-            null,
-            "Click the piano keys, and then press submit. ",
-            _react2.default.createElement("br", null),
-            "A neural network, will tell you what chord is being played. ",
-            _react2.default.createElement("br", null),
-            "Right now, it only know majors chords. ",
-            _react2.default.createElement("br", null),
-            "It can handle a few novel variations (open positions, and a few extensions). ",
-            _react2.default.createElement("br", null),
-            "In the future, a score would go here. ",
-            _react2.default.createElement("br", null),
-            "Future plans include a score render, and a method to train the network from the browser."
-          )
+          "Instructions:"
+        ),
+        _react2.default.createElement(
+          "p",
+          null,
+          "Click the piano keys, and then press submit. ",
+          _react2.default.createElement("br", null),
+          "A neural network, will tell you what chord is being played. ",
+          _react2.default.createElement("br", null),
+          "Right now, it only knows majors chords. ",
+          _react2.default.createElement("br", null),
+          "It can handle a few novel variations (open positions, and a few extensions). ",
+          _react2.default.createElement("br", null),
+          "In the future, a score would go here. ",
+          _react2.default.createElement("br", null),
+          "Future plans include a score render, and a method to train the network from the browser. https://github.com/Adrianjewell91/theorizer ",
+          _react2.default.createElement("br", null),
+          "https://github.com/Adrianjewell91/first_neural_network"
         )
       );
     }
