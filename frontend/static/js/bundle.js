@@ -25559,6 +25559,10 @@ var _navBarContainer = __webpack_require__(124);
 
 var _navBarContainer2 = _interopRequireDefault(_navBarContainer);
 
+var _analyzerContainer = __webpack_require__(127);
+
+var _analyzerContainer2 = _interopRequireDefault(_analyzerContainer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var App = function App() {
@@ -25566,6 +25570,7 @@ var App = function App() {
         'div',
         null,
         _react2.default.createElement(_navBarContainer2.default, null),
+        _react2.default.createElement(_analyzerContainer2.default, null),
         _react2.default.createElement(_keyboardContainer2.default, null)
     );
 };
@@ -25642,25 +25647,15 @@ var Keyboard = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (Keyboard.__proto__ || Object.getPrototypeOf(Keyboard)).call(this, props));
 
-    _this.handleSubmit = _this.handleSubmit.bind(_this);
     _this.handleKeyToggle = _this.handleKeyToggle.bind(_this);
     return _this;
   }
 
+  //add or remove the key from the dataset upon key a press.
+  //also need to select the key when pressed.
+  //could potentially send a request every time key is pressed.
+
   _createClass(Keyboard, [{
-    key: 'handleSubmit',
-    value: function handleSubmit() {
-      //dummy data for now.
-      console.log('nothing happens here');
-      // const data = [0, 1, 0, 0, 0,  1,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0,  1,  0,  0,  1,  0,  0,  0,  0,  1,  0,  0,];
-      // this.props.requestMajorChordName([this.state.data]);
-    }
-
-    //add or remove the key from the dataset upon key a press.
-    //also need to select the key when pressed.
-    //could potentially send a request every time key is pressed.
-
-  }, {
     key: 'handleKeyToggle',
     value: function handleKeyToggle() {
       var _this2 = this;
@@ -25681,7 +25676,7 @@ var Keyboard = function (_React$Component) {
             e.target.classList.remove("black");
           }
         }
-        console.log(newData);
+
         _this2.props.receiveUserInputData(newData);
       };
     }
@@ -25691,11 +25686,6 @@ var Keyboard = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement(
-          'button',
-          { type: 'button', onClick: this.handleSubmit },
-          'Submit a query to neural network'
-        ),
         _react2.default.createElement(
           'div',
           { className: 'keyboard-register' },
@@ -36348,6 +36338,113 @@ var userInputDataReducer = exports.userInputDataReducer = function userInputData
       return state;
   }
 };
+
+/***/ }),
+/* 127 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _reactRedux = __webpack_require__(31);
+
+var _analyzer = __webpack_require__(128);
+
+var _analyzer2 = _interopRequireDefault(_analyzer);
+
+var _prediction_actions = __webpack_require__(49);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var mapStateToProps = function mapStateToProps(state) {
+    return {
+        prediction: state.entities.prediction,
+        userInputData: state.entities.userInputData
+    };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+    return {
+        requestMajorChordName: function requestMajorChordName(prediction) {
+            return dispatch((0, _prediction_actions.requestMajorChordName)(prediction));
+        }
+    };
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_analyzer2.default);
+
+/***/ }),
+/* 128 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Analyzer = function (_React$Component) {
+  _inherits(Analyzer, _React$Component);
+
+  function Analyzer(props) {
+    _classCallCheck(this, Analyzer);
+
+    var _this = _possibleConstructorReturn(this, (Analyzer.__proto__ || Object.getPrototypeOf(Analyzer)).call(this, props));
+
+    _this.handleSubmit = _this.handleSubmit.bind(_this);
+    return _this;
+  }
+
+  _createClass(Analyzer, [{
+    key: 'handleSubmit',
+    value: function handleSubmit() {
+      console.log('analzer button - should work soon.');
+      this.props.requestMajorChordName([this.props.userInputData]);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var prediction = this.props.prediction.response;
+      return _react2.default.createElement(
+        'div',
+        { className: 'analyzer-div' },
+        _react2.default.createElement(
+          'button',
+          { type: 'button', onClick: this.handleSubmit },
+          'Submit a query to neural network'
+        ),
+        _react2.default.createElement(
+          'div',
+          null,
+          prediction
+        )
+      );
+    }
+  }]);
+
+  return Analyzer;
+}(_react2.default.Component);
+
+exports.default = Analyzer;
 
 /***/ })
 /******/ ]);

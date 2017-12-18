@@ -3,15 +3,7 @@ import React from 'react';
 class Keyboard extends React.Component {
   constructor(props) {
     super(props);
-    this.handleSubmit = this.handleSubmit.bind(this);
     this.handleKeyToggle = this.handleKeyToggle.bind(this);
-  }
-
-  handleSubmit() {
-    //dummy data for now.
-    console.log('nothing happens here');
-    // const data = [0, 1, 0, 0, 0,  1,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0,  1,  0,  0,  1,  0,  0,  0,  0,  1,  0,  0,];
-    // this.props.requestMajorChordName([this.state.data]);
   }
 
   //add or remove the key from the dataset upon key a press.
@@ -35,16 +27,14 @@ class Keyboard extends React.Component {
           e.target.classList.remove("black")
         }
       }
-      console.log(newData);
-      this.props.receiveUserInputData(newData)
+
+      this.props.receiveUserInputData(newData);
     }
   }
 
   render () {
     return (
       <div>
-        <button type="button" onClick={this.handleSubmit}>Submit a query to neural network</button>
-
         <div className="keyboard-register">
           <button onClick={this.handleKeyToggle()} className="white" id='0'></button>
           <button onClick={this.handleKeyToggle()} className="black" id='1'></button>

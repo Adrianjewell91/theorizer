@@ -9,10 +9,12 @@ import {
 
 import KeyboardContainer from "./keyboard/keyboardContainer";
 import NavBarContainer from './navBar/navBarContainer';
+import AnalyzerContainer from './analyzer/analyzerContainer';
 
 const App = () => (
     <div>
       <NavBarContainer/>
+      <AnalyzerContainer/>
       <KeyboardContainer/>
     </div>
 );
