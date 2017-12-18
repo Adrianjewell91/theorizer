@@ -36426,42 +36426,26 @@ var Analyzer = function (_React$Component) {
     }
   }, {
     key: "handleSubmit",
-    value: function handleSubmit() {
+    value: function handleSubmit(e) {
       this.props.requestMajorChordName([this.props.userInputData]);
     }
   }, {
     key: "render",
     value: function render() {
       var prediction = this.props.prediction.response;
+
       return _react2.default.createElement(
         "div",
         { className: "analyzer-div" },
         _react2.default.createElement(
-          "div",
-          null,
-          _react2.default.createElement(
-            "h3",
-            null,
-            _react2.default.createElement(
-              "button",
-              { className: "analyze-button", type: "button", onClick: this.handleSubmit },
-              "Submit"
-            )
-          ),
-          _react2.default.createElement("br", null),
-          _react2.default.createElement("br", null),
-          _react2.default.createElement("br", null),
-          _react2.default.createElement(
-            "span",
-            null,
-            "Analysis"
-          ),
-          _react2.default.createElement("br", null),
-          _react2.default.createElement(
-            "span",
-            { className: "analysis-result" },
-            prediction
-          )
+          "button",
+          { className: "analyze-button", type: "button", onClick: this.handleSubmit },
+          "Submit"
+        ),
+        _react2.default.createElement(
+          "span",
+          { className: "analysis-result" },
+          prediction
         )
       );
     }
@@ -36558,20 +36542,38 @@ var Analyzer = function (_React$Component) {
         ),
         _react2.default.createElement(
           "p",
-          null,
+          { className: "Instructions" },
           "Click the piano keys, and then press submit. ",
+          _react2.default.createElement("br", null),
           _react2.default.createElement("br", null),
           "A neural network, will tell you what chord is being played. ",
           _react2.default.createElement("br", null),
+          _react2.default.createElement("br", null),
           "Right now, it only knows majors chords. ",
+          _react2.default.createElement("br", null),
           _react2.default.createElement("br", null),
           "It can handle a few novel variations (open positions, and a few extensions). ",
           _react2.default.createElement("br", null),
+          _react2.default.createElement("br", null),
           "In the future, a score would go here. ",
           _react2.default.createElement("br", null),
-          "Future plans include a score render, and a method to train the network from the browser. https://github.com/Adrianjewell91/theorizer ",
           _react2.default.createElement("br", null),
-          "https://github.com/Adrianjewell91/first_neural_network"
+          _react2.default.createElement(
+            "a",
+            { href: "https://github.com/Adrianjewell91/theorizer" },
+            "Github"
+          ),
+          " ",
+          _react2.default.createElement("br", null),
+          _react2.default.createElement(
+            "a",
+            { href: "https://github.com/Adrianjewell91/first_neural_network" },
+            "Neural Network Github"
+          ),
+          " ",
+          _react2.default.createElement("br", null),
+          _react2.default.createElement("br", null),
+          "Hosted on AWS t2.micro EC2 Instance."
         )
       );
     }

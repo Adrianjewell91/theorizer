@@ -10,18 +10,20 @@ class Analyzer extends React.Component {
     return (
       <div className="score-render-div">
           <p>Instructions:</p>
-          <p>
-            Click the piano keys, and then press submit. <br/>
-            A neural network, will tell you what chord is being played. <br/>
-            Right now, it only knows majors chords. <br/>
-            It can handle a few novel variations (open positions, and a few extensions). <br/>
+          <p className="Instructions">
+            Click the piano keys, and then press submit. <br/><br/>
+            A neural network, will tell you what chord is being played. <br/><br/>
+            Right now, it only knows majors chords. <br/><br/>
+            It can handle a few novel variations (open positions, and a few extensions). <br/><br/>
 
-            In the future, a score would go here. <br/>
-            Future plans include a score render, and a method to train the network
-            from the browser.
+            In the future, a score would go here. <br/><br/>
 
-            https://github.com/Adrianjewell91/theorizer <br/>
-            https://github.com/Adrianjewell91/first_neural_network
+            <a href="https://github.com/Adrianjewell91/theorizer">Github</a> <br/>
+            <a href="https://github.com/Adrianjewell91/first_neural_network">Neural Network Github</a> <br/>
+
+            <br/>
+
+            Hosted on AWS t2.micro EC2 Instance.
           </p>
       </div>
     )

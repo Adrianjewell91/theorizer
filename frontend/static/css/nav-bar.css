@@ -1,6 +1,8 @@
 .nav-header-div {
   display: flex;
-  justify-content: space-between;s
+  justify-content: space-between;
+  background: black;
+  color: white;
 }
 
 .nav-header {

@@ -14,23 +14,18 @@ class Analyzer extends React.Component {
     }
   }
 
-  handleSubmit() {
+  handleSubmit(e) {
     this.props.requestMajorChordName([this.props.userInputData]);
   }
 
+
   render() {
     const prediction = this.props.prediction.response;
+
     return (
       <div className="analyzer-div">
-        <div>
-          <h3><button className="analyze-button" type="button" onClick={this.handleSubmit}>Submit</button></h3>
-          <br/>
-          <br/>
-          <br/>
-          <span>Analysis</span>
-          <br/>
+          <button className="analyze-button" type="button" onClick={this.handleSubmit}>Submit</button>
           <span className="analysis-result">{prediction}</span>
-        </div>
       </div>
     )
   }
