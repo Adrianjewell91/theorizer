@@ -32,12 +32,12 @@ def neural_network_list(request):
         # This all needs to go out of this part and into something else.
         pdb.set_trace()
         model = model_from_json(json_file)
-        try:
-            model.load_weights(weights_file)
-        except Exception:
-            pass
+        model.load_weights(weights_file)
+        model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+        # try:
+        # except Exception:
+        #     pass
             # return JsonResponse('{response: "ERROR - loading did not work"}', safe=False,status=400)
-
         first_test = numpy.array([[int(s) for s in request.GET['input'].split(',')]])
         prediction = model.predict(first_test).tolist()
         return JsonResponse('{response: %s }' % prediction[0].index(max(prediction[0])), safe=False)
