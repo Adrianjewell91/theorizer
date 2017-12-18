@@ -1,1 +1,1 @@
-# Theorizer: Analyze piano scores with a neural network that improves with use.
+# Theorizer: Analyze piano scores with neural network.
