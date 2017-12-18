@@ -3,7 +3,7 @@ from django.shortcuts import render
 from keras.models import model_from_json
 from keras import backend
 
-KERAS_BACKEND=theano
+# KERAS_BACKEND=theano
 
 # Create your views here.
 
