@@ -9,22 +9,23 @@ from keras.models import model_from_json
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import os
+
 import pdb
 import numpy
+import json
 
 @csrf_exempt
 def neural_network_list(request):
-    if request.method == 'GET':
-        return JsonResponse('{response: "ERROR - use post"}', safe=False,status=400)
+    if request.method == 'POST':
+        return JsonResponse('{response: "ERROR - use get"}', safe=False,status=400)
 
-    elif request.method == 'POST':
+    elif request.method == 'GET':
         try:
             # This all needs to go out of this part and into something else.
             pdb.set_trace()
             json_file = open(os.path.join('neural_net','encoded_model_for_js', 'model.json')).read()
-            weights_file = os.path.join('neural_net','encoded_model_for_js', 'model.h5')
-            first_test = numpy.array(request.get_json()['input'])
-
+            weights_file = os.path.join('neural_net','encoded_model_for_js', 'model.hdf5')
+            first_test = numpy.array([[int(s) for s in request.GET['input'].split(',')]])
             # numpy.array([[ 0,  1,  0,  0,  0,  1,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,
             # 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
             # 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
