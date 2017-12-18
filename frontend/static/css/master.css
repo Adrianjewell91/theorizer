@@ -9,7 +9,7 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, button {
     margin:0;
     padding:0;
     border:0;
@@ -32,12 +32,25 @@ body {
 }
 
 .white-key {
+  width: 50px;
   background: white;
+  border-left: 1px solid black;
 }
 
 .black-key {
-  height: 75%;
-  background-color: black;
+
+  position: relative;
+    right: .75%;
+  /* background-color: ?green; */
+}
+
+.black-key::after {
+  content: "";
+  position: absolute;
+  background: black;
+  width: 40px;
+  height: 140px;
+  bottom: 30%;
 }
 
 .selected {
