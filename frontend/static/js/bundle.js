@@ -35832,7 +35832,7 @@ var Keyboard = function (_React$Component) {
       //dummy data for now.
       var data = [0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0];
       //put data in parentheses for keras formatting;
-      console.log(this.state.data);
+      // console.log(this.state.data);
       this.props.requestMajorChordName([this.state.data]);
     }
 
@@ -35852,7 +35852,7 @@ var Keyboard = function (_React$Component) {
 
         e.target.style.background = newData[parseInt(e.target.id)] === 0 ? '' : 'purple';
 
-        console.log(newData);
+        // console.log(newData);
         _this2.setState({ data: newData });
       };
     }
@@ -35870,17 +35870,9 @@ var Keyboard = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { className: 'keyboard-register' },
-          _react2.default.createElement(
-            'button',
-            { onClick: this.handleKeyToggle(0), className: 'white-key', id: '0 selected' },
-            'a'
-          ),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(0), className: 'white-key', id: '0' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(1), className: 'black-key', id: '1' }),
-          _react2.default.createElement(
-            'button',
-            { onClick: this.handleKeyToggle(2), className: 'white-key', id: '2' },
-            'b'
-          ),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(2), className: 'white-key', id: '2' }),
           _react2.default.createElement(
             'button',
             { onClick: this.handleKeyToggle(3), className: 'white-key', id: '3' },

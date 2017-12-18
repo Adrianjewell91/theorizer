@@ -24,8 +24,11 @@ body {
 }
 
 .keyboard-register {
+  overflow-x: scroll;
+  position: absolute;
+  bottom: 0;
   display: flex;
-  height: 100px;
+  height: 150px;
 }
 
 .white-key {
@@ -33,6 +36,7 @@ body {
 }
 
 .black-key {
+  height: 75%;
   background-color: black;
 }
 

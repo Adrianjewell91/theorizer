@@ -13,7 +13,7 @@ class Keyboard extends React.Component {
     //dummy data for now.
     const data = [0, 1, 0, 0, 0,  1,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0,  1,  0,  0,  1,  0,  0,  0,  0,  1,  0,  0,];
     //put data in parentheses for keras formatting;
-    console.log(this.state.data);
+    // console.log(this.state.data);
     this.props.requestMajorChordName([this.state.data]);
   }
 
@@ -29,7 +29,7 @@ class Keyboard extends React.Component {
 
       e.target.style.background = newData[parseInt(e.target.id)] === 0 ? '' : 'purple';
 
-      console.log(newData);
+      // console.log(newData);
       this.setState({data: newData});
     }
   }
@@ -40,9 +40,9 @@ class Keyboard extends React.Component {
         <button type="button" onClick={this.handleSubmit}>Submit a query to neural network</button>
 
         <div className="keyboard-register">
-          <button onClick={this.handleKeyToggle(0)} className="white-key" id='0 selected'>a</button>
+          <button onClick={this.handleKeyToggle(0)} className="white-key" id='0'></button>
           <button onClick={this.handleKeyToggle(1)} className="black-key" id='1'></button>
-          <button onClick={this.handleKeyToggle(2)} className="white-key" id='2'>b</button>
+          <button onClick={this.handleKeyToggle(2)} className="white-key" id='2'></button>
           <button onClick={this.handleKeyToggle(3)} className="white-key" id='3'>c</button>
           <button onClick={this.handleKeyToggle(4)} className="black-key" id='4'></button>
           <button onClick={this.handleKeyToggle(5)} className="white-key" id='5'></button>
