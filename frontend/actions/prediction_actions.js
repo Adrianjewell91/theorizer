@@ -1,7 +1,5 @@
 import $ from 'jquery';
 
-const data = [[0,1,0,0,0,  1,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0,  1,  0,  0,  1,  0,  0,  0,  0,  1,  0,  0,]];
-
 //
 export const RECEIVE_PREDICTION = "RECEIVE_PREDICTION";
 
@@ -19,5 +17,5 @@ export const getMajorChordName = (data) => {
 
 //thunks
 export const requestMajorChordName = (input) => (dispatch) => {
-  return getChordName(input).then((res) => dispatch(receiveChordName(res)));
+  return getMajorChordName(input).then((res) => dispatch(receiveMajorChordName(res)));
 }

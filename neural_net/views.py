@@ -40,7 +40,7 @@ def neural_network_list(request):
             # return JsonResponse('{response: "ERROR - loading did not work"}', safe=False,status=400)
         first_test = numpy.array([[int(s) for s in request.GET['input'].split(',')]])
         prediction = model.predict(first_test).tolist()
-        return JsonResponse('{response: %s }' % prediction[0].index(max(prediction[0])), safe=False)
+        return JsonResponse('{"response": %s}' % prediction[0].index(max(prediction[0])), safe=False)
 
 @csrf_exempt
 def neural_network_detail(request, pk):

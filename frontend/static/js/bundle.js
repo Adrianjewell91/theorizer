@@ -35827,6 +35827,8 @@ var Keyboard = function (_React$Component) {
     key: "handleSubmit",
     value: function handleSubmit() {
       console.log("at handlesubmit");
+      var data = [[0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0]];
+      this.props.requestMajorChordName(data);
     }
   }, {
     key: "render",
@@ -35987,13 +35989,20 @@ exports.predictionReducer = undefined;
 
 var _prediction_actions = __webpack_require__(123);
 
+var keys = { 0: 'C', 1: 'Db', 2: 'D', 3: 'Eb', 4: 'E',
+  5: 'F', 6: 'F#', 7: 'G', 8: 'Ab', 9: 'A',
+  10: 'Bb', 11: 'B' };
+
 var predictionReducer = exports.predictionReducer = function predictionReducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var action = arguments[1];
 
   switch (action.type) {
     case _prediction_actions.RECEIVE_PREDICTION:
-      return action.prediction;
+      // debugger
+      var parsed = JSON.parse(action.prediction);
+      return { response: keys[parsed.response] };
+
     default:
       return state;
   }
@@ -36017,8 +36026,6 @@ var _jquery2 = _interopRequireDefault(_jquery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var data = [[0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0]];
-
 //
 var RECEIVE_PREDICTION = exports.RECEIVE_PREDICTION = "RECEIVE_PREDICTION";
 
@@ -36037,8 +36044,8 @@ var getMajorChordName = exports.getMajorChordName = function getMajorChordName(d
 //thunks
 var requestMajorChordName = exports.requestMajorChordName = function requestMajorChordName(input) {
   return function (dispatch) {
-    return getChordName(input).then(function (res) {
-      return dispatch(receiveChordName(res));
+    return getMajorChordName(input).then(function (res) {
+      return dispatch(receiveMajorChordName(res));
     });
   };
 };
