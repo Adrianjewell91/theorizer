@@ -22,8 +22,6 @@ class Analyzer extends React.Component {
             <a href="https://github.com/Adrianjewell91/first_neural_network">Neural Network Github</a> <br/>
 
             <br/>
-
-            Hosted on AWS t2.micro EC2 Instance.
           </p>
       </div>
     )

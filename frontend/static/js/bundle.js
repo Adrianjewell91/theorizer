@@ -36380,8 +36380,7 @@ var Analyzer = function (_React$Component) {
           ),
           " ",
           _react2.default.createElement("br", null),
-          _react2.default.createElement("br", null),
-          "Hosted on AWS t2.micro EC2 Instance."
+          _react2.default.createElement("br", null)
         )
       );
     }
