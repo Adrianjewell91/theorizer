@@ -36281,21 +36281,13 @@ var NavBar = function (_React$Component) {
       return _react2.default.createElement(
         "div",
         { className: "nav-header-div" },
-        _react2.default.createElement(
-          "div",
-          { className: "nav-logo" },
-          "Theorize"
-        ),
+        _react2.default.createElement("div", { className: "nav-logo" }),
         _react2.default.createElement(
           "h1",
           { className: "nav-header" },
           "Theorizer - Analyze Music with a Neural Network."
         ),
-        _react2.default.createElement(
-          "div",
-          { className: "nav-session-buttons" },
-          "login"
-        )
+        _react2.default.createElement("div", { className: "nav-session-buttons" })
       );
     }
   }]);
@@ -36414,6 +36406,9 @@ var Analyzer = function (_React$Component) {
     return _this;
   }
 
+  //whenever the userInputData changes, I want to make a new request.
+  //
+
   _createClass(Analyzer, [{
     key: 'handleSubmit',
     value: function handleSubmit() {
@@ -36435,6 +36430,7 @@ var Analyzer = function (_React$Component) {
         _react2.default.createElement(
           'div',
           null,
+          'Current Analysis: ',
           prediction
         )
       );
