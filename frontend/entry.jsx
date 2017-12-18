@@ -2,13 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
 
-import {getChordName} from './util/neural_net'
-const data = [[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
-
+import configureStore from './store/store';
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
-  window.get = getChordName(data);
 
-  ReactDOM.render(<Root/>, root);
+  //for bootstrapping the user.
+  let store;
+
+  if (window.currentUser) {
+    const preloadedState = { session: { currentUser: window.currentUser } };
+    store = configureStore(preloadedState);
+    delete window.currentUser;
+  } else {
+    store = configureStore();
+  }
+  
+  window.store = store;
+  ReactDOM.render(<Root store={store}/>, root);
 });

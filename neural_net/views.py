@@ -30,7 +30,7 @@ def neural_network_list(request):
 
     elif request.method == 'GET':
         # This all needs to go out of this part and into something else.
-        pdb.set_trace()
+        # pdb.set_trace()
         model = model_from_json(json_file)
         model.load_weights(weights_file)
         model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
