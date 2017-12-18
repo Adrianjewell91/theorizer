@@ -35841,6 +35841,138 @@ var Keyboard = function (_React$Component) {
           "button",
           { type: "button", onClick: this.handleSubmit },
           "Submit a query to neural network"
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "keyboard-register" },
+          _react2.default.createElement(
+            "button",
+            { className: "white-key", id: "0" },
+            "a"
+          ),
+          _react2.default.createElement("button", { className: "black-key", id: "1" }),
+          _react2.default.createElement(
+            "button",
+            { className: "white-key", id: "2" },
+            "b"
+          ),
+          _react2.default.createElement(
+            "button",
+            { className: "white-key", id: "3" },
+            "c"
+          ),
+          _react2.default.createElement("button", { className: "black-key", id: "4" }),
+          _react2.default.createElement("button", { className: "white-key", id: "5" }),
+          _react2.default.createElement("button", { className: "black-key", id: "6" }),
+          _react2.default.createElement("button", { className: "white-key", id: "7" }),
+          _react2.default.createElement("button", { className: "white-key", id: "8" }),
+          _react2.default.createElement("button", { className: "black-key", id: "9" }),
+          _react2.default.createElement("button", { className: "white-key", id: "10" }),
+          _react2.default.createElement("button", { className: "black-key", id: "11" }),
+          _react2.default.createElement("button", { className: "white-key", id: "12" }),
+          _react2.default.createElement("button", { className: "black-key", id: "13" }),
+          _react2.default.createElement("button", { className: "white-key", id: "14" }),
+          _react2.default.createElement(
+            "button",
+            { className: "white-key", id: "15" },
+            "c"
+          ),
+          _react2.default.createElement("button", { className: "black-key", id: "16" }),
+          _react2.default.createElement("button", { className: "white-key", id: "17" }),
+          _react2.default.createElement("button", { className: "black-key", id: "18" }),
+          _react2.default.createElement("button", { className: "white-key", id: "19" }),
+          _react2.default.createElement("button", { className: "white-key", id: "20" }),
+          _react2.default.createElement("button", { className: "black-key", id: "21" }),
+          _react2.default.createElement("button", { className: "white-key", id: "22" }),
+          _react2.default.createElement("button", { className: "black-key", id: "23" }),
+          _react2.default.createElement("button", { className: "white-key", id: "24" }),
+          _react2.default.createElement("button", { className: "black-key", id: "25" }),
+          _react2.default.createElement("button", { className: "white-key", id: "26" }),
+          _react2.default.createElement(
+            "button",
+            { className: "white-key", id: "27" },
+            "c"
+          ),
+          _react2.default.createElement("button", { className: "black-key", id: "28" }),
+          _react2.default.createElement("button", { className: "white-key", id: "29" }),
+          _react2.default.createElement("button", { className: "black-key", id: "30" }),
+          _react2.default.createElement("button", { className: "white-key", id: "31" }),
+          _react2.default.createElement("button", { className: "white-key", id: "32" }),
+          _react2.default.createElement("button", { className: "black-key", id: "33" }),
+          _react2.default.createElement("button", { className: "white-key", id: "34" }),
+          _react2.default.createElement("button", { className: "black-key", id: "35" }),
+          _react2.default.createElement("button", { className: "white-key", id: "36" }),
+          _react2.default.createElement("button", { className: "black-key", id: "37" }),
+          _react2.default.createElement("button", { className: "white-key", id: "38" }),
+          _react2.default.createElement(
+            "button",
+            { className: "white-key", id: "39" },
+            "c"
+          ),
+          _react2.default.createElement("button", { className: "black-key", id: "40" }),
+          _react2.default.createElement("button", { className: "white-key", id: "41" }),
+          _react2.default.createElement("button", { className: "black-key", id: "42" }),
+          _react2.default.createElement("button", { className: "white-key", id: "43" }),
+          _react2.default.createElement("button", { className: "white-key", id: "44" }),
+          _react2.default.createElement("button", { className: "black-key", id: "45" }),
+          _react2.default.createElement("button", { className: "white-key", id: "46" }),
+          _react2.default.createElement("button", { className: "black-key", id: "47" }),
+          _react2.default.createElement("button", { className: "white-key", id: "48" }),
+          _react2.default.createElement("button", { className: "black-key", id: "49" }),
+          _react2.default.createElement("button", { className: "white-key", id: "50" }),
+          _react2.default.createElement(
+            "button",
+            { className: "white-key", id: "51" },
+            "c"
+          ),
+          _react2.default.createElement("button", { className: "black-key", id: "52" }),
+          _react2.default.createElement("button", { className: "white-key", id: "53" }),
+          _react2.default.createElement("button", { className: "black-key", id: "54" }),
+          _react2.default.createElement("button", { className: "white-key", id: "55" }),
+          _react2.default.createElement("button", { className: "white-key", id: "56" }),
+          _react2.default.createElement("button", { className: "black-key", id: "57" }),
+          _react2.default.createElement("button", { className: "white-key", id: "58" }),
+          _react2.default.createElement("button", { className: "black-key", id: "59" }),
+          _react2.default.createElement("button", { className: "white-key", id: "60" }),
+          _react2.default.createElement("button", { className: "black-key", id: "61" }),
+          _react2.default.createElement("button", { className: "white-key", id: "62" }),
+          _react2.default.createElement(
+            "button",
+            { className: "white-key", id: "63" },
+            "c"
+          ),
+          _react2.default.createElement("button", { className: "black-key", id: "64" }),
+          _react2.default.createElement("button", { className: "white-key", id: "65" }),
+          _react2.default.createElement("button", { className: "black-key", id: "66" }),
+          _react2.default.createElement("button", { className: "white-key", id: "67" }),
+          _react2.default.createElement("button", { className: "white-key", id: "68" }),
+          _react2.default.createElement("button", { className: "black-key", id: "69" }),
+          _react2.default.createElement("button", { className: "white-key", id: "70" }),
+          _react2.default.createElement("button", { className: "black-key", id: "71" }),
+          _react2.default.createElement("button", { className: "white-key", id: "72" }),
+          _react2.default.createElement("button", { className: "black-key", id: "73" }),
+          _react2.default.createElement("button", { className: "white-key", id: "74" }),
+          _react2.default.createElement(
+            "button",
+            { className: "white-key", id: "75" },
+            "c"
+          ),
+          _react2.default.createElement("button", { className: "black-key", id: "76" }),
+          _react2.default.createElement("button", { className: "white-key", id: "77" }),
+          _react2.default.createElement("button", { className: "black-key", id: "78" }),
+          _react2.default.createElement("button", { className: "white-key", id: "79" }),
+          _react2.default.createElement("button", { className: "white-key", id: "80" }),
+          _react2.default.createElement("button", { className: "black-key", id: "81" }),
+          _react2.default.createElement("button", { className: "white-key", id: "82" }),
+          _react2.default.createElement("button", { className: "black-key", id: "83" }),
+          _react2.default.createElement("button", { className: "white-key", id: "84" }),
+          _react2.default.createElement("button", { className: "black-key", id: "85" }),
+          _react2.default.createElement("button", { className: "white-key", id: "86" }),
+          _react2.default.createElement(
+            "button",
+            { className: "white-key", id: "87" },
+            "c"
+          )
         )
       );
     }
@@ -35850,6 +35982,13 @@ var Keyboard = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Keyboard;
+
+//How will this work?
+//One select keys on a keyboard -
+//Press Submit
+//compile the keys into an array called data and ship it off.
+//return key and print it on the screen.
+//I will do this tonight. I will have the keyboard working and it will look like a keyboard.
 
 /***/ }),
 /* 117 */
