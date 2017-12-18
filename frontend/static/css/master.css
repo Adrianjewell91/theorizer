@@ -35,3 +35,7 @@ body {
 .black-key {
   background-color: black;
 }
+
+.selected {
+  background: purple;
+}
