@@ -36226,33 +36226,36 @@ var Analyzer = function (_React$Component) {
   //whenever the userInputData changes, I want to make a new request. Implement later.
 
   _createClass(Analyzer, [{
-    key: "componentWillReceiveProps",
-    value: function componentWillReceiveProps(newProps) {
-      if (this.props.userInputData !== newProps.userInputData) {
-        this.props.requestMajorChordName([newProps.userInputData]);
-      }
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(newProps) {}
+  }, {
+    key: 'componentWillUpdate',
+    value: function componentWillUpdate() {
+      document.getElementsByClassName('analyze-button')[0].disabled = '';
     }
   }, {
-    key: "handleSubmit",
+    key: 'handleSubmit',
     value: function handleSubmit(e) {
       this.props.requestMajorChordName([this.props.userInputData]);
+      document.getElementsByClassName('analyze-button')[0].disabled = 'true';
     }
   }, {
-    key: "render",
+    key: 'render',
     value: function render() {
       var prediction = this.props.prediction.response;
 
       return _react2.default.createElement(
-        "div",
-        { className: "analyzer-div" },
+        'div',
+        { className: 'analyzer-div' },
         _react2.default.createElement(
-          "button",
-          { className: "analyze-button", type: "button", onClick: this.handleSubmit },
-          "Submit"
+          'button',
+          { className: 'analyze-button', type: 'button',
+            onClick: this.handleSubmit },
+          'Submit'
         ),
         _react2.default.createElement(
-          "span",
-          { className: "analysis-result" },
+          'span',
+          { className: 'analysis-result' },
           prediction
         )
       );

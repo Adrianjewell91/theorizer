@@ -9,13 +9,16 @@ class Analyzer extends React.Component {
   //whenever the userInputData changes, I want to make a new request. Implement later.
 
   componentWillReceiveProps(newProps) {
-    if (this.props.userInputData !== newProps.userInputData) {
-        this.props.requestMajorChordName([newProps.userInputData]);
-    }
+
+  }
+
+  componentWillUpdate() {
+    document.getElementsByClassName('analyze-button')[0].disabled = '';
   }
 
   handleSubmit(e) {
     this.props.requestMajorChordName([this.props.userInputData]);
+    document.getElementsByClassName('analyze-button')[0].disabled = 'true';
   }
 
 
@@ -24,7 +27,8 @@ class Analyzer extends React.Component {
 
     return (
       <div className="analyzer-div">
-          <button className="analyze-button" type="button" onClick={this.handleSubmit}>Submit</button>
+          <button className="analyze-button" type="button"
+                  onClick={this.handleSubmit}>Submit</button>
           <span className="analysis-result">{prediction}</span>
       </div>
     )
