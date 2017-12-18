@@ -14,6 +14,9 @@ import pdb
 import numpy
 import json
 
+json_file = open(os.path.join('neural_net','encoded_model_for_js', 'model.json')).read()
+weights_file = os.path.join('neural_net','encoded_model_for_js', 'model.hdf5')
+
 @csrf_exempt
 def neural_network_list(request):
     if request.method == 'POST':
@@ -22,18 +25,16 @@ def neural_network_list(request):
     elif request.method == 'GET':
         try:
             # This all needs to go out of this part and into something else.
-            pdb.set_trace()
-            json_file = open(os.path.join('neural_net','encoded_model_for_js', 'model.json')).read()
-            weights_file = os.path.join('neural_net','encoded_model_for_js', 'model.hdf5')
-            first_test = numpy.array([[int(s) for s in request.GET['input'].split(',')]])
             # numpy.array([[ 0,  1,  0,  0,  0,  1,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,
             # 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
             # 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
             # 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
             # 0,  0,  0,  0,  0,  1,  0,  0,  1,  0,  0,  0,  0,  1,  0,  0,]])
+
+            pdb.set_trace()
             model = model_from_json(json_file)
             model.load_weights(weights_file)
-
+            first_test = numpy.array([[int(s) for s in request.GET['input'].split(',')]])
         except Exception as ex:
             return JsonResponse('{response: "ERROR - loading did not work"}', safe=False,status=400)
 
