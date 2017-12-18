@@ -59,7 +59,7 @@ body {
 .selected::after {
   content: "";
   position: absolute;
-  background: purple;
+  background: blue;
   width: 40px;
   height: 140px;
   bottom: 30%;

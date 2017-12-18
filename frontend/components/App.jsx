@@ -8,10 +8,11 @@ import {
 } from 'react-router-dom';
 
 import KeyboardContainer from "./keyboard/keyboardContainer";
+import NavBarContainer from './navBar/navBarContainer';
 
 const App = () => (
     <div>
-      <h1>Theorizer - Analyze Music with a Neural Network.</h1>
+      <NavBarContainer/>
       <KeyboardContainer/>
     </div>
 );

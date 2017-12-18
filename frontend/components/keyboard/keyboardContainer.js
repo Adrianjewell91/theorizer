@@ -1,13 +1,13 @@
 import { connect } from 'react-redux';
 import Keyboard from './keyboard';
-import { requestMajorChordName } from '../../actions/prediction_actions';
+import { receiveUserInputData } from '../../actions/prediction_actions';
 
 const mapStateToProps = (state) => ({
-    prediction: state.prediction
+    userInputData: state.entities.userInputData
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    requestMajorChordName: (prediction) => dispatch(requestMajorChordName(prediction))
+    receiveUserInputData: (input) => dispatch(receiveUserInputData(input))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Keyboard);

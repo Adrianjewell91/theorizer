@@ -5,16 +5,13 @@ class Keyboard extends React.Component {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleKeyToggle = this.handleKeyToggle.bind(this);
-    //make sure this is 88 notes long.
-    this.state = {data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}
   }
 
   handleSubmit() {
     //dummy data for now.
-    const data = [0, 1, 0, 0, 0,  1,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0,  1,  0,  0,  1,  0,  0,  0,  0,  1,  0,  0,];
-    //put data in parentheses for keras formatting;
-    // console.log(this.state.data);
-    this.props.requestMajorChordName([this.state.data]);
+    console.log('nothing happens here');
+    // const data = [0, 1, 0, 0, 0,  1,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0,  0,  1,  0,  0,  1,  0,  0,  0,  0,  1,  0,  0,];
+    // this.props.requestMajorChordName([this.state.data]);
   }
 
   //add or remove the key from the dataset upon key a press.
@@ -24,7 +21,7 @@ class Keyboard extends React.Component {
   handleKeyToggle() {
     return (e) => {
       // debugger
-      const newData = this.state.data;
+      const newData = this.props.userInputData;
       newData[parseInt(e.target.id)] = newData[parseInt(e.target.id)] === 0 ? 1 : 0;
 
       if (e.target.classList.value === "white") {
@@ -39,7 +36,7 @@ class Keyboard extends React.Component {
         }
       }
       console.log(newData);
-      this.setState({data: newData});
+      this.props.receiveUserInputData(newData)
     }
   }
 
