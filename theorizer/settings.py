@@ -151,3 +151,14 @@ STATICFILES_DIRS = (
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
+# I think I can put the model here.
+from keras.models import model_from_json
+
+json_file = open(os.path.join('neural_net','encoded_model_for_js', 'model.json')).read()
+weights_file = os.path.join('neural_net','encoded_model_for_js', 'model.hdf5')
+
+MODEL = model_from_json(json_file)
+MODEL.load_weights(weights_file)
+MODEL.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])

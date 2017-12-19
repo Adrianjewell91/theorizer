@@ -17,6 +17,6 @@ http://github.com/adrianjewell/first_neural_network
 
 1. Add Musical Score annotation feature.
 
-2. Optimize neural network from Django.
+2. Optimize neural-network/Django interactions.
 
 3. Implement live-learning mechanism for neural network.
