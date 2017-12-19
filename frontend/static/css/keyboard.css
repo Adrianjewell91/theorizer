@@ -1,5 +1,9 @@
+.keyboard-block {
+  overflow: hidden;
+}
+
 .keyboard-register {
-  overflow-x: auto;
+  overflow-x: hidden;
   position: absolute;
   bottom: 0;
   display: flex;

@@ -21,7 +21,7 @@ time, mark, audio, video, button {
 }
 
 body {
-
+  overflow: hidden;
 }
 
 .main-page {

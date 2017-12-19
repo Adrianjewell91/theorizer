@@ -34,7 +34,7 @@ class Keyboard extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className="keyboard-block">
         <div className="keyboard-register">
           <button onClick={this.handleKeyToggle()} className="white" id='0'></button>
           <button onClick={this.handleKeyToggle()} className="black" id='1'></button>
