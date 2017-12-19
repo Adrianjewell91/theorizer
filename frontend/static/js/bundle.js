@@ -36357,13 +36357,13 @@ var Analyzer = function (_React$Component) {
           "Click the piano keys, and then press submit. ",
           _react2.default.createElement("br", null),
           _react2.default.createElement("br", null),
-          "A dense neural network (with one hidden layer), will tell you what chord is being played. ",
+          "A neural network will tell you what chord is being played. ",
           _react2.default.createElement("br", null),
           _react2.default.createElement("br", null),
-          "Right now, it only knows majors chords. ",
+          "Right now, it only knows MAJOR chords. ",
           _react2.default.createElement("br", null),
           _react2.default.createElement("br", null),
-          "It can handle a few novel variations (open positions, and a few extensions). ",
+          "It can handle a few novel variations (open positions, and some extensions). ",
           _react2.default.createElement("br", null),
           _react2.default.createElement("br", null),
           "In the future, a score would go in place of these instructions. ",
@@ -36379,7 +36379,7 @@ var Analyzer = function (_React$Component) {
           _react2.default.createElement(
             "a",
             { href: "https://github.com/Adrianjewell91/first_neural_network" },
-            "Neural Network Explanation and Code"
+            "Neural Network"
           ),
           " ",
           _react2.default.createElement("br", null),
