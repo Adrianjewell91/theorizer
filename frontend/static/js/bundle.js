@@ -25699,91 +25699,91 @@ var Keyboard = function (_React$Component) {
           'div',
           { className: 'keyboard-register' },
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '0' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '1' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '1' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '2' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '3' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '4' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '4' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '5' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '6' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '6' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '7' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '8' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '9' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '9' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '10' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '11' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '11' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '12' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '13' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '13' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '14' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '15' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '16' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '16' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '17' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '18' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '18' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '19' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '20' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '21' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '21' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '22' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '23' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '23' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '24' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '25' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '25' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '26' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '27' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '28' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '28' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '29' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '30' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '30' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '31' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '32' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '33' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '33' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '34' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '35' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '35' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '36' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '37' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '37' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '38' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '39' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '40' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '40' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '41' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '42' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '42' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '43' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '44' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '45' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '45' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '46' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '47' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '47' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '48' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '49' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '49' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '50' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '51' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '52' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '52' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '53' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '54' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '54' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '55' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '56' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '57' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '57' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '58' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '59' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '59' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '60' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '61' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '61' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '62' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '63' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '64' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '64' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '65' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '66' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '66' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '67' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '68' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '69' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '69' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '70' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '71' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '71' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '72' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '73' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '73' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '74' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '75' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '76' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '76' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '77' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '78' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '78' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '79' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '80' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '81' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '81' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '82' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '83' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '83' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '84' }),
-          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black', id: '85' }),
+          _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'black-positioning black', id: '85' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '86' }),
           _react2.default.createElement('button', { onClick: this.handleKeyToggle(), className: 'white', id: '87' })
         )
@@ -36346,45 +36346,7 @@ var Analyzer = function (_React$Component) {
       return _react2.default.createElement(
         "div",
         { className: "score-render-div" },
-        _react2.default.createElement(
-          "p",
-          null,
-          "Instructions:"
-        ),
-        _react2.default.createElement(
-          "p",
-          { className: "Instructions" },
-          "Click the piano keys, and then press submit. ",
-          _react2.default.createElement("br", null),
-          _react2.default.createElement("br", null),
-          "A neural network will tell you what chord is being played. ",
-          _react2.default.createElement("br", null),
-          _react2.default.createElement("br", null),
-          "Right now, it only knows MAJOR chords. ",
-          _react2.default.createElement("br", null),
-          _react2.default.createElement("br", null),
-          "It can handle a few novel variations (open positions, and some extensions). ",
-          _react2.default.createElement("br", null),
-          _react2.default.createElement("br", null),
-          "In the future, a score would go in place of these instructions. ",
-          _react2.default.createElement("br", null),
-          _react2.default.createElement("br", null),
-          _react2.default.createElement(
-            "a",
-            { href: "https://github.com/Adrianjewell91/theorizer" },
-            "Github"
-          ),
-          " ",
-          _react2.default.createElement("br", null),
-          _react2.default.createElement(
-            "a",
-            { href: "https://github.com/Adrianjewell91/first_neural_network" },
-            "Neural Network"
-          ),
-          " ",
-          _react2.default.createElement("br", null),
-          _react2.default.createElement("br", null)
-        )
+        _react2.default.createElement("iframe", { src: "https://flat.io/embed/56ae21579a127715a02901a6?layout=responsive&audioSource=&videoPosition=", height: "450", width: "100%", frameBorder: "0", allowfullscreen: true })
       );
     }
   }]);
@@ -36393,6 +36355,21 @@ var Analyzer = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Analyzer;
+
+// <p>Instructions:</p>
+//   <p className="Instructions">
+//     Click the piano keys, and then press submit. <br/><br/>
+//     A neural network will tell you what chord is being played. <br/><br/>
+//     Right now, it only knows MAJOR chords. <br/><br/>
+//     It can handle a few novel variations (open positions, and some extensions). <br/><br/>
+//
+//     In the future, a score would go in place of these instructions. <br/><br/>
+//
+//     <a href="https://github.com/Adrianjewell91/theorizer">Github</a> <br/>
+//       <a href="https://github.com/Adrianjewell91/first_neural_network">Neural Network</a> <br/>
+//
+//         <br/>
+//         </p>
 
 /***/ }),
 /* 124 */

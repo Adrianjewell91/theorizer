@@ -37,91 +37,91 @@ class Keyboard extends React.Component {
       <div className="keyboard-block">
         <div className="keyboard-register">
           <button onClick={this.handleKeyToggle()} className="white" id='0'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='1'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='1'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='2'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='3'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='4'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='4'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='5'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='6'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='6'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='7'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='8'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='9'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='9'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='10'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='11'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='11'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='12'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='13'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='13'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='14'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='15'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='16'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='16'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='17'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='18'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='18'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='19'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='20'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='21'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='21'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='22'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='23'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='23'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='24'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='25'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='25'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='26'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='27'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='28'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='28'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='29'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='30'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='30'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='31'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='32'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='33'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='33'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='34'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='35'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='35'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='36'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='37'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='37'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='38'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='39'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='40'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='40'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='41'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='42'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='42'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='43'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='44'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='45'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='45'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='46'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='47'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='47'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='48'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='49'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='49'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='50'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='51'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='52'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='52'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='53'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='54'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='54'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='55'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='56'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='57'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='57'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='58'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='59'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='59'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='60'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='61'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='61'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='62'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='63'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='64'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='64'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='65'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='66'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='66'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='67'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='68'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='69'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='69'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='70'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='71'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='71'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='72'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='73'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='73'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='74'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='75'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='76'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='76'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='77'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='78'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='78'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='79'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='80'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='81'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='81'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='82'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='83'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='83'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='84'></button>
-          <button onClick={this.handleKeyToggle()} className="black" id='85'></button>
+          <button onClick={this.handleKeyToggle()} className="black-positioning black" id='85'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='86'></button>
           <button onClick={this.handleKeyToggle()} className="white" id='87'></button>
         </div>
