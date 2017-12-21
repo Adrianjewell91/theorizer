@@ -32,9 +32,10 @@ class Analyzer extends React.Component {
           <span className="analysis-result">{prediction}</span>
             <p> Click the piano keys, and then press SUBMIT.</p>
             <p> A neural network will tell you what chord is being played.</p>
+            <p> Sorry, only major chords and extensions supported right now</p>
               <a href="https://github.com/Adrianjewell91/theorizer">Github</a>
                 <a href="https://github.com/Adrianjewell91/first_neural_network">Neural Network</a>
-              
+
       </div>
     )
   }

@@ -36288,6 +36288,11 @@ var Analyzer = function (_React$Component) {
           ' A neural network will tell you what chord is being played.'
         ),
         _react2.default.createElement(
+          'p',
+          null,
+          ' Sorry, only major chords and extensions supported right now'
+        ),
+        _react2.default.createElement(
           'a',
           { href: 'https://github.com/Adrianjewell91/theorizer' },
           'Github'
