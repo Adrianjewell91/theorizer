@@ -36148,6 +36148,25 @@ var NavBar = function (_React$Component) {
 
 exports.default = NavBar;
 
+// <p> Click the piano keys, and then press submit. A neural network will tell you what chord is being played.
+//   <a href="https://github.com/Adrianjewell91/theorizer">Github</a>
+//     <a href="https://github.com/Adrianjewell91/first_neural_network">Neural Network</a>
+//     </p>
+// <p>Instructions:</p>
+//   <p className="Instructions">
+//     Click the piano keys, and then press submit. <br/><br/>
+//     A neural network will tell you what chord is being played. <br/><br/>
+//     Right now, it only knows MAJOR chords. <br/><br/>
+//     It can handle a few novel variations (open positions, and some extensions). <br/><br/>
+//
+//     In the future, a score would go in place of these instructions. <br/><br/>
+//
+//     <a href="https://github.com/Adrianjewell91/theorizer">Github</a> <br/>
+//       <a href="https://github.com/Adrianjewell91/first_neural_network">Neural Network</a> <br/>
+//
+//         <br/>
+//         </p>
+
 /***/ }),
 /* 120 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -36257,6 +36276,26 @@ var Analyzer = function (_React$Component) {
           'span',
           { className: 'analysis-result' },
           prediction
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          ' Click the piano keys, and then press SUBMIT.'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          ' A neural network will tell you what chord is being played.'
+        ),
+        _react2.default.createElement(
+          'a',
+          { href: 'https://github.com/Adrianjewell91/theorizer' },
+          'Github'
+        ),
+        _react2.default.createElement(
+          'a',
+          { href: 'https://github.com/Adrianjewell91/first_neural_network' },
+          'Neural Network'
         )
       );
     }
@@ -36355,21 +36394,6 @@ var Analyzer = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Analyzer;
-
-// <p>Instructions:</p>
-//   <p className="Instructions">
-//     Click the piano keys, and then press submit. <br/><br/>
-//     A neural network will tell you what chord is being played. <br/><br/>
-//     Right now, it only knows MAJOR chords. <br/><br/>
-//     It can handle a few novel variations (open positions, and some extensions). <br/><br/>
-//
-//     In the future, a score would go in place of these instructions. <br/><br/>
-//
-//     <a href="https://github.com/Adrianjewell91/theorizer">Github</a> <br/>
-//       <a href="https://github.com/Adrianjewell91/first_neural_network">Neural Network</a> <br/>
-//
-//         <br/>
-//         </p>
 
 /***/ }),
 /* 124 */
