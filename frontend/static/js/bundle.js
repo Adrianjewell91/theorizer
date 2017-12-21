@@ -36290,7 +36290,7 @@ var Analyzer = function (_React$Component) {
         _react2.default.createElement(
           'p',
           null,
-          ' Sorry, only major chords and extensions supported right now'
+          ' Sorry, only major chords and extensions supported right now. More coming soon!'
         ),
         _react2.default.createElement(
           'a',
