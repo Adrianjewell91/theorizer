@@ -29,7 +29,7 @@ class Analyzer extends React.Component {
       <div className="analyzer-div">
           <button className="analyze-button" type="button"
                   onClick={this.handleSubmit}>Submit</button>
-          <span className="analysis-result">{prediction}</span>
+          <span className="analysis-result">{prediction || 'Press Submit'}</span>
             <p> Click the piano keys, and then press SUBMIT.</p>
             <p> A neural network will tell you what chord is being played.</p>
             <p> Sorry, only major chords and extensions supported right now. More coming soon!</p>

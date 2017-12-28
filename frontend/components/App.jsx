@@ -13,14 +13,12 @@ import AnalyzerContainer from './analyzer/analyzerContainer';
 import ScoreRendererContainer from './scoreRenderer/scoreRendererContainer';
 
 const App = () => (
-    <div>
-      <NavBarContainer/>
-      <div className="main-page">
+  <div className="main-page">
+        <NavBarContainer/>
         <ScoreRendererContainer/>
         <AnalyzerContainer/>
-      </div>
-      <KeyboardContainer/>
-    </div>
+        <KeyboardContainer/>
+  </div>
 );
 
 export default App;
