@@ -29,10 +29,10 @@ class Analyzer extends React.Component {
       <div className="analyzer-div">
           <button className="analyze-button" type="button"
                   onClick={this.handleSubmit}>Submit</button>
-          <span className="analysis-result">{prediction || 'Press Submit'}</span>
+          <span className="analysis-result">{prediction || 'Submit'}</span>
             <p> Click the piano keys, and then press SUBMIT.</p>
-            <p> A neural network will tell you what chord is being played.</p>
-            <p> Sorry, only major chords and extensions supported right now. More coming soon!</p>
+            <p> A neural network tells you what chord is being played.</p>
+            <p> Only major chords supported right now. More coming soon!</p>
               <a href="https://github.com/Adrianjewell91/theorizer">Github</a>
                 <a href="https://github.com/Adrianjewell91/first_neural_network">Neural Network</a>
 

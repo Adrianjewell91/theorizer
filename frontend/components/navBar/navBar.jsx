@@ -9,8 +9,8 @@ class NavBar extends React.Component {
     return (
       <div className="nav-header-div">
         <div className="nav-logo"></div>
-
-        <h1 className="nav-header">Theorizer - Analyze Music with a Neural Network.</h1>
+        <h1 className="nav-header">Theorizer</h1>
+        <h1 className="nav-header-large">Theorizer - Analyze Music with a Neural Network.</h1>
         <div className="nav-session-buttons"></div>
       </div>
     )

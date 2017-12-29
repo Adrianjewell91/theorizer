@@ -1,0 +1,32 @@
+.analyzer-div {
+  grid-area: analyzer;
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-render-div {
+  grid-area: annotator;
+}
+
+.analysis-result {
+  font-size: 400%;
+}
+
+.analyze-button {
+  width:50%;
+  height: 30%;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.analyze-button:hover {
+  color: white;
+  background-color: gray;
+}
+
+.instructions {
+  text-align: center;
+}

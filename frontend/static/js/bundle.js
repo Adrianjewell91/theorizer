@@ -36128,6 +36128,11 @@ var NavBar = function (_React$Component) {
         _react2.default.createElement(
           "h1",
           { className: "nav-header" },
+          "Theorizer"
+        ),
+        _react2.default.createElement(
+          "h1",
+          { className: "nav-header-large" },
           "Theorizer - Analyze Music with a Neural Network."
         ),
         _react2.default.createElement("div", { className: "nav-session-buttons" })
@@ -36267,7 +36272,7 @@ var Analyzer = function (_React$Component) {
         _react2.default.createElement(
           'span',
           { className: 'analysis-result' },
-          prediction || 'Press Submit'
+          prediction || 'Submit'
         ),
         _react2.default.createElement(
           'p',
@@ -36277,12 +36282,12 @@ var Analyzer = function (_React$Component) {
         _react2.default.createElement(
           'p',
           null,
-          ' A neural network will tell you what chord is being played.'
+          ' A neural network tells you what chord is being played.'
         ),
         _react2.default.createElement(
           'p',
           null,
-          ' Sorry, only major chords and extensions supported right now. More coming soon!'
+          ' Only major chords supported right now. More coming soon!'
         ),
         _react2.default.createElement(
           'a',

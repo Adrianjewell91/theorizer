@@ -1,5 +1,5 @@
 .nav-header-div {
-  /* display: flex; */
+  display: flex;
   grid-area: header;
   justify-content: space-between;
   background: black;
@@ -8,4 +8,18 @@
 
 .nav-header {
   font-size: 200%;
+}
+
+.nav-header-large {
+  display: none;
+}
+
+@media (min-width: 650px) {
+  .nav-header {
+    display: none;
+  }
+  .nav-header-large {
+    display: block;
+    font-size: 150%;
+  }
 }

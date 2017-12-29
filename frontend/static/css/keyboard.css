@@ -1,9 +1,4 @@
-/* .keyboard-block {
-  overflow: hidden;
-} */
-
 .keyboard-register {
-  /* overflow-x: hidden; */
   grid-area: footer;
   overflow: auto;
   white-space: nowrap;
@@ -36,15 +31,11 @@
   bottom: 30%;
 }
 
-.black {
-}
 
 .black::after {
   background: black;
 }
 
-.selected {
-}
 
 .selected::after {
   background: blue;
