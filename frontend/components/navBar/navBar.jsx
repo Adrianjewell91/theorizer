@@ -11,7 +11,10 @@ class NavBar extends React.Component {
         <div className="nav-logo"></div>
         <h1 className="nav-header">Theorizer</h1>
         <h1 className="nav-header-large">Theorizer - Analyze Music with a Neural Network.</h1>
-        <div className="nav-session-buttons"></div>
+        <div className="nav-session-buttons">
+          <a href="https://github.com/Adrianjewell91/theorizer">
+            <i class="fa fa-github" aria-hidden="true"></i></a>
+          </div>
       </div>
     )
   }

@@ -36135,7 +36135,15 @@ var NavBar = function (_React$Component) {
           { className: "nav-header-large" },
           "Theorizer - Analyze Music with a Neural Network."
         ),
-        _react2.default.createElement("div", { className: "nav-session-buttons" })
+        _react2.default.createElement(
+          "div",
+          { className: "nav-session-buttons" },
+          _react2.default.createElement(
+            "a",
+            { href: "https://github.com/Adrianjewell91/theorizer" },
+            _react2.default.createElement("i", { "class": "fa fa-github", "aria-hidden": "true" })
+          )
+        )
       );
     }
   }]);
@@ -36273,31 +36281,6 @@ var Analyzer = function (_React$Component) {
           'span',
           { className: 'analysis-result' },
           prediction || 'Submit'
-        ),
-        _react2.default.createElement(
-          'p',
-          null,
-          ' Click the piano keys, and then press SUBMIT.'
-        ),
-        _react2.default.createElement(
-          'p',
-          null,
-          ' A neural network tells you what chord is being played.'
-        ),
-        _react2.default.createElement(
-          'p',
-          null,
-          ' Only major chords supported right now. More coming soon!'
-        ),
-        _react2.default.createElement(
-          'a',
-          { href: 'https://github.com/Adrianjewell91/theorizer' },
-          'Github'
-        ),
-        _react2.default.createElement(
-          'a',
-          { href: 'https://github.com/Adrianjewell91/first_neural_network' },
-          'Neural Network'
         )
       );
     }
@@ -36387,7 +36370,7 @@ var Analyzer = function (_React$Component) {
       return _react2.default.createElement(
         "div",
         { className: "score-render-div" },
-        _react2.default.createElement("iframe", { src: "https://flat.io/embed/56ae21579a127715a02901a6?layout=responsive&audioSource=&videoPosition=", height: "450", width: "100%", frameBorder: "0", allowfullscreen: true })
+        _react2.default.createElement("iframe", { className: "score-iframe", src: "https://flat.io/embed/56ae21579a127715a02901a6?layout=responsive&audioSource=&videoPosition=", height: "450px", width: "100%", frameBorder: "0", allowFullScreen: true })
       );
     }
   }]);

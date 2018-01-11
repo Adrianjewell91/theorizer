@@ -40,12 +40,28 @@ time, mark, audio, video, button {
   .score-render-div {
     grid-area: annotator;
   }
+
+
+  .main-page {
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas:
+      "header header"
+      "annotator analyzer"
+      "footer footer"
+  }
+}
+
+@media (min-width: 1000px) {
+  .score-render-div {
+    grid-area: annotator;
+  }
+
   .main-page {
     grid-template-columns: 3fr 1fr;
     grid-template-areas:
       "header header"
       "annotator analyzer"
-      "annotator analyzer"
+
       "footer footer"
   }
 }

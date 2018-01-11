@@ -14,6 +14,14 @@
   display: none;
 }
 
+.fa-github{
+  FONT-SIZE: 150%;
+}
+
+.nav-session-buttons {
+  margin-right: 1%;
+}
+
 @media (min-width: 650px) {
   .nav-header {
     display: none;
