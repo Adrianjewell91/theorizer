@@ -6,5 +6,4 @@ whitenoise==3.2
 djangorestframework
 keras
 theano
-
 h5py

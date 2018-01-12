@@ -26,7 +26,7 @@ class NavBar extends React.Component {
           <ol>
             <li>Click on the piano keys to select notes.</li>
             <li>A neural network will assess the chord and return it on the screen.</li>
-            <li>Currently, only major chords, are supported, more coming soon.</li>
+            <li>Currently, only major chords are supported. More coming soon!</li>
             <li>Use the music score (embedded from Flat IO) as a guide for selecting notes.</li>
           </ol>
         </div>
