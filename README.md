@@ -23,8 +23,8 @@ A Django backend powers a self-designed and trained  dense neural network, built
 
 # Feature Highlights:
 
-1. <a name="nn"></a>Piano
-The piano is built using online virtual pianos as an inspiration. The problem with other online virtual pianos was that they weren't long enough.  The goal of Theorizer was to offer musical analysis for an entire keyboard, so horizontal scrolling was required:
+## 1. <a name="nn"></a>Piano
+The piano draws inspiration from online virtual pianos. The problem with other online virtual pianos was that they weren't long enough.  The goal of Theorizer was to offer musical analysis for an entire keyboard, so horizontal scrolling was required:
 
 ```css
 .keyboard-register {
@@ -59,13 +59,21 @@ The piano is built using online virtual pianos as an inspiration. The problem wi
 ````
 
 
-2. <a name="nn"></a>CSS-Grid
+## 2. <a name="nn"></a>CSS-Grid
 
-3. <a name="nn"></a>I-Frame
+CSS-Grid organizes the components using this progressive grid-tool.
 
-4. <a name="nn"></a>Musical Analyzer
+## 3. <a name="nn"></a>I-Frame
 
-5. <a name="nn"></a>See information about the neural network:
+The Flat-IO Embedded score aims to give the users a starting point for selecting notes. A future implementation goal is to connect the score with the keyboard.
+
+## 4. <a name="nn"></a>Musical Analyzer
+
+Press the submit button to make an analysis of the notes that you've selected. If you've selected none, A major is returned by default.
+
+## 5. <a name="nn"></a>Neural Network
+
+See information about the neural network:
 http://github.com/adrianjewell/first_neural_network
 
 
