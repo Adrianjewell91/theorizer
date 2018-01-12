@@ -14,15 +14,58 @@ A Django backend powers a self-designed and trained  dense neural network, built
 
 # Features:
 
-1. 88-Key Input Piano, with horizontal scrolling.
-2. CSS-Grid Layout.
-3. Embedded I-Frame from Flat-IO.
-4. Musical Analyzer.
+1. [88-Key Input Piano, with horizontal scrolling.](#piano)
+2. [CSS-Grid Layout.](#grid)
+3. [Embedded I-Frame from Flat-IO.](#flat)
+4. [Musical Analyzer.](#analyzer)
+5. [Self Designed and Trained Neural Network to Recognize Chords.](#nn)
 
 
-### Code Samples:
+# Feature Highlights:
 
-See Neural network here:
+1. <a name="nn"></a>Piano
+The piano is built using online virtual pianos as an inspiration. The problem with other online virtual pianos was that they weren't long enough.  The goal of Theorizer was to offer musical analysis for an entire keyboard, so horizontal scrolling was required:
+
+```css
+.keyboard-register {
+  grid-area: footer;
+  overflow: auto;
+  white-space: nowrap;
+  bottom: 0;
+  height: 200px;
+}
+
+.white {
+  width: 50px;
+  height: 100%;
+  display: inline-block;
+  background: white;
+  border-left: 1px solid black;
+}
+
+.black-positioning {
+  position: relative;
+  right: 1.5%;
+  bottom: 30%;
+}
+
+.black-positioning::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 140px;
+  bottom: 30%;
+}
+````
+
+
+2. <a name="nn"></a>CSS-Grid
+
+3. <a name="nn"></a>I-Frame
+
+4. <a name="nn"></a>Musical Analyzer
+
+5. <a name="nn"></a>See information about the neural network:
 http://github.com/adrianjewell/first_neural_network
 
 
