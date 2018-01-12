@@ -818,16 +818,27 @@ var receiveUserInputData = exports.receiveUserInputData = function receiveUserIn
 };
 
 //util
-var getMajorChordName = exports.getMajorChordName = function getMajorChordName(data) {
-  return _jquery2.default.ajax({ method: "get",
-    url: "/api/neural_net/?input=" + data
-  });
+var getMajorChordName = exports.getMajorChordName = function getMajorChordName(data, callback) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', "/api/neural_net/?input=" + data);
+  xhr.onload = function () {
+    if (xhr.status === 200) {
+      callback(JSON.parse(xhr.responseText));
+    } else {
+      console.log(xhr.status);
+    }
+  };
+  xhr.send();
+
+  // return $.ajax({method: "get",
+  //                url: `/api/neural_net/?input=${data}`,
+  // });
 };
 
 //thunks
 var requestMajorChordName = exports.requestMajorChordName = function requestMajorChordName(input) {
   return function (dispatch) {
-    return getMajorChordName(input).then(function (res) {
+    return getMajorChordName(input, function (res) {
       return dispatch(receiveMajorChordName(res));
     });
   };
@@ -36155,7 +36166,7 @@ var NavBar = function (_React$Component) {
           _react2.default.createElement(
             "a",
             { href: "https://github.com/Adrianjewell91/theorizer" },
-            _react2.default.createElement("i", { "class": "fa fa-github", "aria-hidden": "true" })
+            _react2.default.createElement("i", { className: "fa fa-github", "aria-hidden": "true" })
           )
         ),
         _react2.default.createElement(

@@ -18,7 +18,7 @@ class NavBar extends React.Component {
         <h1 className="nav-header-large">Theorizer - Analyze Music with a Neural Network.</h1>
         <div className="nav-session-buttons">
           <a href="https://github.com/Adrianjewell91/theorizer">
-            <i class="fa fa-github" aria-hidden="true"></i></a>
+            <i className="fa fa-github" aria-hidden="true"></i></a>
           </div>
 
         <div ref={(dropDownInstructions) => this.dropDownInstructions = dropDownInstructions}
