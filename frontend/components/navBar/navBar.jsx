@@ -3,18 +3,33 @@ import React from 'react';
 class NavBar extends React.Component {
   constructor (props) {
     super(props);
+    this.revealDropDown = this.revealDropDown.bind(this);
+  }
+
+  revealDropDown() {
+    this.dropDownInstructions.classList.toggle("hidden");
   }
 
   render() {
     return (
       <div className="nav-header-div">
-        <div className="nav-logo"></div>
+        <div className="nav-logo"><button onClick={this.revealDropDown} className="instructions">Instructions</button></div>
         <h1 className="nav-header">Theorizer</h1>
         <h1 className="nav-header-large">Theorizer - Analyze Music with a Neural Network.</h1>
         <div className="nav-session-buttons">
           <a href="https://github.com/Adrianjewell91/theorizer">
             <i class="fa fa-github" aria-hidden="true"></i></a>
           </div>
+
+        <div ref={(dropDownInstructions) => this.dropDownInstructions = dropDownInstructions}
+             className="instruction-drop-down hidden">
+          <ol>
+            <li>Click on the piano keys to select notes.</li>
+            <li>A neural network will assess the chord and return it on the screen.</li>
+            <li>Currently, only major chords, are supported, more coming soon.</li>
+            <li>Use the music score (embedded from Flat IO) as a guide for selecting notes.</li>
+          </ol>
+        </div>
       </div>
     )
   }

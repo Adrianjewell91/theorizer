@@ -30,6 +30,7 @@ time, mark, audio, video, button {
     'footer';
 }
 
+
 @media (max-width: 649px) {
   .score-render-div {
     display: none;

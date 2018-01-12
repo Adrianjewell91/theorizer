@@ -29,8 +29,7 @@ class Analyzer extends React.Component {
       <div className="analyzer-div">
           <button className="analyze-button" type="button"
                   onClick={this.handleSubmit}>Submit</button>
-          <span className="analysis-result">{prediction || 'Submit'}</span>
-
+                <span className="analysis-result">{prediction || '--'}</span>
       </div>
     )
   }

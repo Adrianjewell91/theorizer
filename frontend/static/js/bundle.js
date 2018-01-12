@@ -25656,10 +25656,6 @@ var Keyboard = function (_React$Component) {
     return _this;
   }
 
-  //add or remove the key from the dataset upon key a press.
-  //also need to select the key when pressed.
-  //could potentially send a request every time key is pressed.
-
   _createClass(Keyboard, [{
     key: 'handleKeyToggle',
     value: function handleKeyToggle() {
@@ -36115,16 +36111,34 @@ var NavBar = function (_React$Component) {
   function NavBar(props) {
     _classCallCheck(this, NavBar);
 
-    return _possibleConstructorReturn(this, (NavBar.__proto__ || Object.getPrototypeOf(NavBar)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (NavBar.__proto__ || Object.getPrototypeOf(NavBar)).call(this, props));
+
+    _this.revealDropDown = _this.revealDropDown.bind(_this);
+    return _this;
   }
 
   _createClass(NavBar, [{
+    key: "revealDropDown",
+    value: function revealDropDown() {
+      this.dropDownInstructions.classList.toggle("hidden");
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       return _react2.default.createElement(
         "div",
         { className: "nav-header-div" },
-        _react2.default.createElement("div", { className: "nav-logo" }),
+        _react2.default.createElement(
+          "div",
+          { className: "nav-logo" },
+          _react2.default.createElement(
+            "button",
+            { onClick: this.revealDropDown, className: "instructions" },
+            "Instructions"
+          )
+        ),
         _react2.default.createElement(
           "h1",
           { className: "nav-header" },
@@ -36142,6 +36156,37 @@ var NavBar = function (_React$Component) {
             "a",
             { href: "https://github.com/Adrianjewell91/theorizer" },
             _react2.default.createElement("i", { "class": "fa fa-github", "aria-hidden": "true" })
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { ref: function ref(dropDownInstructions) {
+              return _this2.dropDownInstructions = dropDownInstructions;
+            },
+            className: "instruction-drop-down hidden" },
+          _react2.default.createElement(
+            "ol",
+            null,
+            _react2.default.createElement(
+              "li",
+              null,
+              "Click on the piano keys to select notes."
+            ),
+            _react2.default.createElement(
+              "li",
+              null,
+              "A neural network will assess the chord and return it on the screen."
+            ),
+            _react2.default.createElement(
+              "li",
+              null,
+              "Currently, only major chords, are supported, more coming soon."
+            ),
+            _react2.default.createElement(
+              "li",
+              null,
+              "Use the music score (embedded from Flat IO) as a guide for selecting notes."
+            )
           )
         )
       );
@@ -36280,7 +36325,7 @@ var Analyzer = function (_React$Component) {
         _react2.default.createElement(
           'span',
           { className: 'analysis-result' },
-          prediction || 'Submit'
+          prediction || '--'
         )
       );
     }

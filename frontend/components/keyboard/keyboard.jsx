@@ -6,10 +6,6 @@ class Keyboard extends React.Component {
     this.handleKeyToggle = this.handleKeyToggle.bind(this);
   }
 
-  //add or remove the key from the dataset upon key a press.
-  //also need to select the key when pressed.
-  //could potentially send a request every time key is pressed.
-
   handleKeyToggle() {
     return (e) => {
       // debugger
