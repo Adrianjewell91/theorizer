@@ -4,6 +4,8 @@
   white-space: nowrap;
   bottom: 0;
   height: 200px;
+  border-bottom: 1px solid black;
+  box-shadow: 2px 2px 5px #888;
 }
 
 .white {
