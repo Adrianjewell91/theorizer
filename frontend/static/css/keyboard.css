@@ -7,7 +7,7 @@
 }
 
 .white {
-  width: 50px;
+  width: 1.93%;
   height: 100%;
   display: inline-block;
   background: white;
@@ -16,14 +16,15 @@
 
 .black-positioning {
   position: relative;
-  right: 1.5%;
+  right: .5%;
   bottom: 30%;
 }
 
 .black-positioning::after {
+  box-shadow: 2px 2px 5px #888;
   content: "";
   position: absolute;
-  width: 40px;
+  width: 1.7ex;
   height: 140px;
   bottom: 30%;
 }

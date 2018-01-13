@@ -36191,7 +36191,7 @@ var NavBar = function (_React$Component) {
             _react2.default.createElement(
               "li",
               null,
-              "Currently, only major chords, are supported, more coming soon."
+              "Currently, only major chords are supported. More coming soon!"
             ),
             _react2.default.createElement(
               "li",
