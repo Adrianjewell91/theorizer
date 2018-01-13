@@ -30,7 +30,6 @@
 }
 
 .instruction-drop-down {
-  /* display: block; */
   border-radius: 10px;
   padding: 10px 30px 10px;
   position: absolute;
@@ -38,6 +37,7 @@
   color:white;
   top: 30px;
   left: 10px;
+  box-shadow: 2px 5px 5px #888
 }
 
 .instructions:hover {
