@@ -36331,7 +36331,7 @@ var Analyzer = function (_React$Component) {
           'button',
           { className: 'analyze-button', type: 'button',
             onClick: this.handleSubmit },
-          'Submit'
+          'Discover'
         ),
         _react2.default.createElement(
           'span',
