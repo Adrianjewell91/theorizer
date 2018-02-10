@@ -1,6 +1,3 @@
-import $ from 'jquery';
-
-//
 export const RECEIVE_PREDICTION = "RECEIVE_PREDICTION";
 export const RECEIVE_INPUT = "RECEIVE_INPUT";
 
