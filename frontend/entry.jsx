@@ -9,13 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //for bootstrapping the user.
   let store;
+  if (process) {console.log(process)} else {console.log('no process')}
 
   // if (window.currentUser) {
   //   const preloadedState = { session: { currentUser: window.currentUser } };
   //   store = configureStore(preloadedState);
   //   delete window.currentUser;
   // } else {
-    store = configureStore();
+  store = configureStore();
   // }
 
   window.store = store;

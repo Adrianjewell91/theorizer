@@ -3455,7 +3455,7 @@ var isExtraneousPopstateEvent = function isExtraneousPopstateEvent(event) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(process) {
 
 var _react = __webpack_require__(0);
 
@@ -3480,6 +3480,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //for bootstrapping the user.
   var store = void 0;
+  if (process) {
+    console.log(process);
+  } else {
+    console.log('no process');
+  }
 
   // if (window.currentUser) {
   //   const preloadedState = { session: { currentUser: window.currentUser } };
@@ -3492,6 +3497,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.store = store;
   _reactDom2.default.render(_react2.default.createElement(_root2.default, { store: store }), root);
 });
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 51 */
