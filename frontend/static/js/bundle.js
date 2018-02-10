@@ -36299,43 +36299,53 @@ var Analyzer = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (Analyzer.__proto__ || Object.getPrototypeOf(Analyzer)).call(this, props));
 
+    _this.state = { disabled: undefined };
     _this.handleSubmit = _this.handleSubmit.bind(_this);
     return _this;
   }
 
   //whenever the userInputData changes, I want to make a new request. Implement later.
+  //is there another way to handle the toggling?
+  //Probably by writing a button component, and then assigning a "disabled" key to the local state.
+  //Change the state when clicked.
+
 
   _createClass(Analyzer, [{
-    key: 'componentWillReceiveProps',
-    value: function componentWillReceiveProps(newProps) {}
-  }, {
-    key: 'componentWillUpdate',
-    value: function componentWillUpdate() {
-      document.getElementsByClassName('analyze-button')[0].disabled = '';
+    key: "componentWillReceiveProps",
+    value: function componentWillReceiveProps(newProps) {
+      this.setState({ disabled: undefined });
     }
   }, {
-    key: 'handleSubmit',
+    key: "componentWillUpdate",
+    value: function componentWillUpdate() {
+      // document.getElementsByClassName('analyze-button')[0].disabled = '';
+
+    }
+  }, {
+    key: "handleSubmit",
     value: function handleSubmit(e) {
       this.props.requestMajorChordName([this.props.userInputData]);
-      document.getElementsByClassName('analyze-button')[0].disabled = 'true';
+      // document.getElementsByClassName('analyze-button')[0].disabled = 'true';
+      this.setState({ disabled: true });
     }
   }, {
-    key: 'render',
+    key: "render",
     value: function render() {
       var prediction = this.props.prediction.response;
 
       return _react2.default.createElement(
-        'div',
-        { className: 'analyzer-div' },
+        "div",
+        { className: "analyzer-div" },
         _react2.default.createElement(
-          'button',
-          { className: 'analyze-button', type: 'button',
-            onClick: this.handleSubmit },
-          'Discover'
+          "button",
+          { className: "analyze-button", type: "button",
+            onClick: this.handleSubmit,
+            disabled: this.state["disabled"] },
+          "Discover"
         ),
         _react2.default.createElement(
-          'span',
-          { className: 'analysis-result' },
+          "span",
+          { className: "analysis-result" },
           prediction || '--'
         )
       );
