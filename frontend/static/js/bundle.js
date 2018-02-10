@@ -3481,7 +3481,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //for bootstrapping the user.
   var store = void 0;
   if (process) {
-    console.log(process);
+    console.log(window.location);
   } else {
     console.log('no process');
   }
