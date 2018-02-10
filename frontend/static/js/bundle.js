@@ -3481,13 +3481,13 @@ document.addEventListener("DOMContentLoaded", function () {
   //for bootstrapping the user.
   var store = void 0;
 
-  if (window.currentUser) {
-    var preloadedState = { session: { currentUser: window.currentUser } };
-    store = (0, _store2.default)(preloadedState);
-    delete window.currentUser;
-  } else {
-    store = (0, _store2.default)();
-  }
+  // if (window.currentUser) {
+  //   const preloadedState = { session: { currentUser: window.currentUser } };
+  //   store = configureStore(preloadedState);
+  //   delete window.currentUser;
+  // } else {
+  store = (0, _store2.default)();
+  // }
 
   window.store = store;
   _reactDom2.default.render(_react2.default.createElement(_root2.default, { store: store }), root);
@@ -36451,7 +36451,7 @@ exports.default = Analyzer;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
+
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -36471,13 +36471,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var middlewares = [_reduxThunk2.default];
 
-if (process.env.NODE_ENV !== 'production') {
-    // must use 'require' (import only allowed at top of file)
-    var _require = __webpack_require__(130),
-        logger = _require.logger;
+// if (process.env.NODE_ENV !== 'production') {
+// must use 'require' (import only allowed at top of file)
 
-    middlewares.push(logger);
-}
+var _require = __webpack_require__(130),
+    logger = _require.logger;
+
+middlewares.push(logger);
+// }
 
 var configureStore = function configureStore() {
     var preloadedState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
@@ -36485,7 +36486,6 @@ var configureStore = function configureStore() {
 };
 
 exports.default = configureStore;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 125 */
