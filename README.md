@@ -74,7 +74,7 @@ Press the submit button to make an analysis of the notes that you've selected. I
 ## 5. <a name="nn"></a>Neural Network
 
 See information about the neural network:
-http://github.com/adrianjewell/first_neural_network
+https://github.com/Adrianjewell91/first_neural_network
 
 
 
