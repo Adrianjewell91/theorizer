@@ -2,6 +2,8 @@
 
 Theorizer helps students memorize piano music. http://theorizer.herokuapp.com
 
+See neural network implementation  https://github.com/Adrianjewell91/first_neural_network
+
 # Background and Overview
 
 This section outlines the requirements and justification for Theorizer, an interactive music theory analyzer that helps students memorize their music more quickly.  There are two parts to the specification: the neural network itself and the user-interface. The user interface is the application through which the user inputs musical information, and the neural network will accept the input and return useful information to the user. The ultimate goal of this project is to preserve everything that is known about western classical music, specifically from the piano repertoire. That is a huge undertaking, in the meantime, we can satisfy ourselves with simply building a machine that can analyze patterns in music. 
