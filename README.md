@@ -86,7 +86,7 @@ https://github.com/Adrianjewell91/first_neural_network
 ### User Interface: 
 
 Users should be able to enter music information in three ways: listed in terms of priority:
-1. By selecting information from a musical score (shown in the application), by using resizable boxes and encapsulate the music. 
+1. By selecting information from a musical score (shown in the application), by using resizable boxes that encapsulate chunks of music. 
 2. Through midi input that receive information and converts it into a musical score. 
 3. Through an on-screen keyboard and musical score, on which they press buttons to enter musical information.
 
@@ -99,7 +99,7 @@ It certainly also be necessary to write logic that converts the output of the mu
 
 ### The Musical-Analysis AI: 
 The AI should be able to do a lot of things, ideally do everything an academic music theorist would be able to say about a work of classical piano from the earliest baroque works to twelve tone music. Any sequence of pitches that can be played on the 88 keys of the piano that has an organizational pattern is valid for analysis. To start, however, it should be very useful for the AI to be able to do the things below, in orders of priority:
-1. Classify chords: The root, inversion, and chord type (maj, min, dim, aug, dom7, min7, maj7, maj/min7, sus2/4, additional extensions)
+1. Classify chords: The root, inversion, and chord type (maj, min, dim, aug, dom7, min7, maj7, maj/min7, sus2/4, additional extensions). Output: English
 2. Classify chord progressions with three chords: Given three groups of pitches, determine chord progression (I-V-I, I-vi-I, I-IV-I, I-IV-V, I-iv-V, I-ii6-V, I-ii-V, and equivalent progressions in the minor mode). When I say ‘groups of pitches’, I mean three groups of ideally three or more notes, but not so convoluted as to make the type of chord unidentifiable. 
 3. Classify chord progressions with four chords, same as above.
 4. Classify chord progressions with pitch names.
@@ -108,8 +108,8 @@ The AI should be able to do a lot of things, ideally do everything an academic m
 7. Read in a four-part chord progression and determine whether any rules of voice leading were broken.
 8. Read in a three or four part progression and accurate separate out the voices, outputting one at a time. 
 9. Read in a passage from a piano piece, and accurately separate piece into melody, harmony, and bass.
-10. Read a a passage from a piano piece and separate out the voices, out putting one at a time. 
-11. Read in an entire musical piece, and determine the chord progressions by bar, along with any modulations. 
+10. Read a a passage from a piano piece and separate out the voices, out putting one at a time. Output: potentially to color the score according to the melodies. 
+11. Read in an entire musical piece, and determine the chord progressions by bar, along with any modulations. Output: A labeling and coloring of the score. 
 
 
 ### What people are forced to do now:
