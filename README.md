@@ -8,11 +8,11 @@ This section outlines the requirements and justification for Theorizer, an inter
 
 As a pianist, I’m having trouble memorizing this particular section of music, so I open up Theorizer and play that portion of the music. Theorizer should return to some useful information about the passage that helps me think about the passage more clearly and thus helps me memorize it. 
 
+# Technologies
+
 Theorizer is a tool for musical education. A neural network accepts input from either a keyboard or piano and returns musical information, such as chord name (C, D, E).
 
 Production is currently in beta, and currently only classifies major chords. Back-end is a Django framework with a Neural Network powered by Theano, Keras, and associated libraries. Front-end is a React.js/Redux single page application.
-
-# Technologies
 
 A Django backend powers a self-designed and trained  dense neural network, built and exported with the Keras library. The Django backend loads the weights from the neural network, and serves analyses with an API. The frontend is a single page UI, built with React.js/Redux. Webpack manages frontend javascript assets.  
 
@@ -23,7 +23,7 @@ A Django backend powers a self-designed and trained  dense neural network, built
 3. [Embedded I-Frame from Flat-IO.](#flat)
 4. [Musical Analyzer.](#analyzer)
 5. [Self Designed and Trained Neural Network to Recognize Chords.](#nn)
-
+6. [Detailed Specification for Further Development](#spec)
 
 # Feature Highlights:
 
@@ -81,31 +81,35 @@ See information about the neural network:
 https://github.com/Adrianjewell91/first_neural_network
 
 
-## 6. Further Implementation: Specification for Further Development.
+## 6. <a name="spec"></a>Further Implementation: Specification for Further Development.
 
 ### User Interface: 
 
 Users should be able to enter music information in three ways: listed in terms of priority:
-    1. By selecting information from a musical score (shown in the application), by using resizable boxes and encapsulate the music. 
-    2. Through midi input that receive information and converts it into a musical score. 
-    3. Through an on-screen keyboard and musical score, on which they press buttons to enter musical information. 
-2. The Middleware: The middleware, most likely necessary, will have to convert midi input into a sequence of arrays that denote each time step in the musical work. For the requirements below, each array will have 88 indices, consisting or either zeroes or ones, with a value of one denoting that particular pitch is being heard at that time.  At the early stages, musical information can perhaps be clumped by measure, but as rhythm becomes more of a factor in analysis, each array may need to denote a smaller and smaller unit of time, perhaps first by each beat, and then perhaps by each half note.  If a note is sustained longer than a single time frame, simply repeat that pitch in every time frame in which it would be heard. For example, if the sequence of arrays is representing every half note, and the score contains quarter notes, simply repeat the quarter notes in the immediately subsequent time frame to account for the fact that a quarter note is equal to two half notes, and so forth.
+1. By selecting information from a musical score (shown in the application), by using resizable boxes and encapsulate the music. 
+2. Through midi input that receive information and converts it into a musical score. 
+3. Through an on-screen keyboard and musical score, on which they press buttons to enter musical information.
+
+The UI needs a complete remake using a more lightwieght framework, and of course, the input methods need to be developed.
+
+### The Middleware: 
+The middleware, most likely necessary, will have to convert midi input into a sequence of arrays that denote each time step in the musical work. For the requirements below, each array will have 88 indices, consisting or either zeroes or ones, with a value of one denoting that particular pitch is being heard at that time.  At the early stages, musical information can perhaps be clumped by measure, but as rhythm becomes more of a factor in analysis, each array may need to denote a smaller and smaller unit of time, perhaps first by each beat, and then perhaps by each half note.  If a note is sustained longer than a single time frame, simply repeat that pitch in every time frame in which it would be heard. For example, if the sequence of arrays is representing every half note, and the score contains quarter notes, simply repeat the quarter notes in the immediately subsequent time frame to account for the fact that a quarter note is equal to two half notes, and so forth.
 
 It certainly also be necessary to write logic that converts the output of the musical AI into human reading information, whether that be English, or musical notation. 
 
 ### The Musical-Analysis AI: 
 The AI should be able to do a lot of things, ideally do everything an academic music theorist would be able to say about a work of classical piano from the earliest baroque works to twelve tone music. Any sequence of pitches that can be played on the 88 keys of the piano that has an organizational pattern is valid for analysis. To start, however, it should be very useful for the AI to be able to do the things below, in orders of priority:
-    1. Classify chords: The root, inversion, and chord type (maj, min, dim, aug, dom7, min7, maj7, maj/min7, sus2/4, additional extensions)
-    2. Classify chord progressions with three chords: Given three groups of pitches, determine chord progression (I-V-I, I-vi-I, I-IV-I, I-IV-V, I-iv-V, I-ii6-V, I-ii-V, and equivalent progressions in the minor mode). When I say ‘groups of pitches’, I mean three groups of ideally three or more notes, but not so convoluted as to make the type of chord unidentifiable. 
-    3. Classify chord progressions with four chords, same as above.
-    4. Classify chord progressions with pitch names.
-    5. Classify scales as ionian (major), doran, Phrygian, lydian, mixolydian, aeolian, lydian, along with root, and show different options. 
-    6. Read three-part chord progression and determine whether any rules of voice leading were broken, and name the pitch that broke the rule.
-    7. Read in a four-part chord progression and determine whether any rules of voice leading were broken.
-    8. Read in a three or four part progression and accurate separate out the voices, outputting one at a time. 
-    9. Read in a passage from a piano piece, and accurately separate piece into melody, harmony, and bass.
-    10. Read a a passage from a piano piece and separate out the voices, out putting one at a time. 
-    11. Read in an entire musical piece, and determine the chord progressions by bar, along with any modulations. 
+1. Classify chords: The root, inversion, and chord type (maj, min, dim, aug, dom7, min7, maj7, maj/min7, sus2/4, additional extensions)
+2. Classify chord progressions with three chords: Given three groups of pitches, determine chord progression (I-V-I, I-vi-I, I-IV-I, I-IV-V, I-iv-V, I-ii6-V, I-ii-V, and equivalent progressions in the minor mode). When I say ‘groups of pitches’, I mean three groups of ideally three or more notes, but not so convoluted as to make the type of chord unidentifiable. 
+3. Classify chord progressions with four chords, same as above.
+4. Classify chord progressions with pitch names.
+5. Classify scales as ionian (major), doran, Phrygian, lydian, mixolydian, aeolian, lydian, along with root, and show different options. 
+6. Read three-part chord progression and determine whether any rules of voice leading were broken, and name the pitch that broke the rule.
+7. Read in a four-part chord progression and determine whether any rules of voice leading were broken.
+8. Read in a three or four part progression and accurate separate out the voices, outputting one at a time. 
+9. Read in a passage from a piano piece, and accurately separate piece into melody, harmony, and bass.
+10. Read a a passage from a piano piece and separate out the voices, out putting one at a time. 
+11. Read in an entire musical piece, and determine the chord progressions by bar, along with any modulations. 
 
 
 ### What people are forced to do now:
