@@ -4,19 +4,18 @@ Theorizer helps students memorize piano music. http://theorizer.herokuapp.com
 
 See neural network implementation  https://github.com/Adrianjewell91/first_neural_network
 
-# Background and Overview
+# Overview
 
-This section outlines the requirements and justification for Theorizer, an interactive music theory analyzer that helps students memorize their music more quickly.  There are two parts to the specification: the neural network itself and the user-interface. The user interface is the application through which the user inputs musical information, and the neural network will accept the input and return useful information to the user. The ultimate goal of this project is to preserve everything that is known about western classical music, specifically from the piano repertoire. That is a huge undertaking, in the meantime, we can satisfy ourselves with simply building a machine that can analyze patterns in music. 
-
-As a pianist, I’m having trouble memorizing this particular section of music, so I open up Theorizer and play that portion of the music. Theorizer should return to some useful information about the passage that helps me think about the passage more clearly and thus helps me memorize it. 
-
-# Technologies
-
-Theorizer is a tool for musical education. A neural network accepts input from either a keyboard or piano and returns musical information, such as chord name (C, D, E).
+Theorizer is a tool for musical education. A neural network accepts input from either a keyboard or piano and returns musical information, such as chord name. As a pianist, if I’m having trouble memorizing this particular section of music, I open up Theorizer and play that portion of the music. Theorizer should return to some useful information about the passage that helps me think about the passage more clearly and thus helps me memorize it. 
 
 Production is currently in beta, and currently only classifies major chords. Back-end is a Django framework with a Neural Network powered by Theano, Keras, and associated libraries. Front-end is a React.js/Redux single page application.
 
-A Django backend powers a self-designed and trained  dense neural network, built and exported with the Keras library. The Django backend loads the weights from the neural network, and serves analyses with an API. The frontend is a single page UI, built with React.js/Redux. Webpack manages frontend javascript assets.  
+A Django backend powers a self-designed and trained  dense neural network, built and exported with the Keras library. The Django backend loads the weights from the neural network, and serves analyses with an API. The frontend is a single page UI, built with React.js/Redux. Webpack manages frontend javascript assets. 
+
+# Background
+
+This section outlines the requirements and justification for Theorizer, an interactive music theory analyzer that helps students memorize their music more quickly.  There are two parts to the specification: the neural network itself and the user-interface. The user interface is the application through which the user inputs musical information, and the neural network will accept the input and return useful information to the user. The ultimate goal of this project is to preserve everything that is known about western classical music, specifically from the piano repertoire. That is a huge undertaking, in the meantime, we can satisfy ourselves with simply building a machine that can analyze patterns in music. 
+
 
 # Features:
 
