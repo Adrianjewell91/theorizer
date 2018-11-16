@@ -4,6 +4,8 @@ Theorizer helps students memorize piano music. MVP: http://theorizer.herokuapp.c
 
 See neural network implementation  https://github.com/Adrianjewell91/first_neural_network
 
+Adrian Jewell's solo piano album: https://www.soundcloud.com/adrianjewell
+
 # Overview
 
 Theorizer is a tool for musical education. A neural network accepts input from either a keyboard or piano and returns musical information, such as chord name. As a pianist, if I’m having trouble memorizing this particular section of music, I open up Theorizer and play that portion of the music. Theorizer should return to some useful information about the passage that helps me think about the passage more clearly and thus helps me memorize it. 
