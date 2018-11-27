@@ -8,7 +8,7 @@ Adrian Jewell's solo piano album: https://www.soundcloud.com/adrianjewell
 
 # Overview
 
-Theorizer is a tool for musical education. At its core is an artificial intelligence that accepts input from either a keyboard or piano and returns useful information about the music, such as chord name. As a pianist, I might be having trouble memorizing a particular section of music, so I open up Theorizer and play that portion of the music. Theorizer should return to some useful information about the passage that helps me think about the passage more clearly and thereby me memorize it. 
+Theorizer is a tool for musical education. At its core is an artificial intelligence that accepts input from either a keyboard or piano and returns useful information about the music, such as chord name for a very simple example. As a pianist, I might be having trouble memorizing a particular section of music, so I open up Theorizer and play that portion of the music. Theorizer should return to some useful information about the passage that helps me think about the passage more clearly and thereby me memorize it. 
 
 Production is currently in beta, and currently classifies major chords in atypical arrangements. The Back-end is a Django framework with a densely connected feed forward neural network powered by Theano, Keras, and associated libraries. Front-end is a React.js/Redux single page application.
 
