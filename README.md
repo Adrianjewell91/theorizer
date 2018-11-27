@@ -91,7 +91,10 @@ What isn't discussed are the implementation details that are part of engineering
 ### User Interface: 
 
 Users should be able to enter music information in three ways: listed in terms of priority:
-1. By selecting information from a musical score (shown in the application), by using either resizable boxes that encapsulate chunks of music, or a pointer system to select and de-select notes. 
+1. By selecting information from a musical score (shown in the application), by using either resizable boxes that encapsulate chunks of music, or a pointer system to select and de-select notes. See the below screen for a sample idea: 
+
+<img src="https://github.com/Adrianjewell91/theorizer/blob/master/docs/Score-annotation.png"/>
+
 2. Through midi input that receive information. 
 3. Through an on-screen keyboard, on which they press buttons to enter musical information. This musical keyboard may either be connected or disconnected to the musical score.
 
