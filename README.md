@@ -1,6 +1,6 @@
 # Theorizer: Analyze piano scores with neural network.
 
-Theorizer helps students memorize piano music. MVP: http://theorizer.herokuapp.com
+Theorizer helps students memorize piano music. POC: http://theorizer.herokuapp.com
 
 See neural network implementation  https://github.com/Adrianjewell91/first_neural_network
 
