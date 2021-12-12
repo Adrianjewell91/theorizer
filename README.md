@@ -1,4 +1,5 @@
 # Theorizer: Analyze piano scores with neural network.
+<img src="https://github.com/Adrianjewell91/theorizer/blob/master/docs/Score-annotation.png"/>
 
 Theorizer helps students memorize piano music. POC: ~~http://theorizer.herokuapp.com~~ (deprecated, run locally)
 
